@@ -1,6 +1,5 @@
 package com.github.technus.tectech.thing.metaTileEntity.multi;
 
-import static com.github.technus.tectech.TecTech.eyeOfHarmonyRecipeStorage;
 import static com.github.technus.tectech.thing.casing.GT_Block_CasingsTT.texturePage;
 import static com.github.technus.tectech.thing.casing.TT_Container_Casings.eyeOfHarmonyRenderBlock;
 import static com.github.technus.tectech.thing.casing.TT_Container_Casings.sBlockCasingsBA0;
@@ -1078,7 +1077,7 @@ public class GT_MetaTileEntity_EM_EyeOfHarmony extends GT_MetaTileEntity_Multibl
             lagPreventer = 0;
             // No item in multi gui slot.
 
-            currentRecipe = eyeOfHarmonyRecipeStorage.recipeLookUp(controllerStack);
+            currentRecipe = null;
             if (currentRecipe == null) {
                 return CheckRecipeResultRegistry.NO_RECIPE;
             }

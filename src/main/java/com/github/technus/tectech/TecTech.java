@@ -11,7 +11,6 @@ import com.github.technus.tectech.loader.gui.CreativeTabTecTech;
 import com.github.technus.tectech.mechanics.enderStorage.EnderWorldSavedData;
 import com.github.technus.tectech.nei.IMCForNEI;
 import com.github.technus.tectech.proxy.CommonProxy;
-import com.github.technus.tectech.recipe.EyeOfHarmonyRecipeStorage;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
@@ -32,7 +31,6 @@ import gregtech.api.objects.XSTR;
                 + "required-after:structurelib;"
                 + "after:ComputerCraft;"
                 + "after:OpenComputers;"
-                + "required-after:gtneioreplugin;"
                 + "required-after:gregtech;"
                 + "after:dreamcraft;"
                 + "after:appliedenergistics2;"
@@ -107,9 +105,9 @@ public class TecTech {
     @Mod.EventHandler
     @SuppressWarnings("unused")
     public void onLoadCompleted(FMLLoadCompleteEvent event) {
-        eyeOfHarmonyRecipeStorage = new EyeOfHarmonyRecipeStorage();
+        // eyeOfHarmonyRecipeStorage = new EyeOfHarmonyRecipeStorage();
     }
 
-    public static EyeOfHarmonyRecipeStorage eyeOfHarmonyRecipeStorage = null;
+    // public static EyeOfHarmonyRecipeStorage eyeOfHarmonyRecipeStorage = null;
 
 }
