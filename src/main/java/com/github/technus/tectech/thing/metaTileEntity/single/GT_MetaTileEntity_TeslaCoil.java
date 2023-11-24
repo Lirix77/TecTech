@@ -23,8 +23,6 @@ import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.reflect.FieldUtils;
 
 import com.github.technus.tectech.TecTech;
-import com.github.technus.tectech.loader.NetworkDispatcher;
-import com.github.technus.tectech.mechanics.spark.RendererMessage;
 import com.github.technus.tectech.mechanics.spark.ThaumSpark;
 import com.github.technus.tectech.mechanics.tesla.ITeslaConnectable;
 import com.github.technus.tectech.mechanics.tesla.ITeslaConnectableSimple;
@@ -260,22 +258,6 @@ public class GT_MetaTileEntity_TeslaCoil extends GT_MetaTileEntity_BasicBatteryB
 
         // Send Power
         powerTeslaNodeMap(this);
-
-        // TODO Encapsulate the spark sender
-        sparkCount--;
-        if (sparkCount == 0) {
-            sparkCount = 10;
-            if (!sparkList.isEmpty()) {
-                NetworkDispatcher.INSTANCE.sendToAllAround(
-                        new RendererMessage.RendererData(sparkList),
-                        aBaseMetaTileEntity.getWorld().provider.dimensionId,
-                        aBaseMetaTileEntity.getXCoord(),
-                        aBaseMetaTileEntity.getYCoord(),
-                        aBaseMetaTileEntity.getZCoord(),
-                        256);
-                sparkList.clear();
-            }
-        }
     }
 
     @Override

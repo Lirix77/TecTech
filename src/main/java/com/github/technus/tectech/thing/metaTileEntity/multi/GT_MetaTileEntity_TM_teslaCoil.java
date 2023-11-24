@@ -48,8 +48,6 @@ import org.apache.commons.lang3.tuple.Pair;
 import org.jetbrains.annotations.NotNull;
 
 import com.github.technus.tectech.TecTech;
-import com.github.technus.tectech.loader.NetworkDispatcher;
-import com.github.technus.tectech.mechanics.spark.RendererMessage;
 import com.github.technus.tectech.mechanics.spark.ThaumSpark;
 import com.github.technus.tectech.mechanics.tesla.ITeslaConnectable;
 import com.github.technus.tectech.mechanics.tesla.ITeslaConnectableSimple;
@@ -846,22 +844,6 @@ public class GT_MetaTileEntity_TM_teslaCoil extends GT_MetaTileEntity_Multiblock
         // Power transfer
         outputCurrentDisplay.set(powerTeslaNodeMap(this));
 
-        // TODO Encapsulate the spark sender
-        sparkCount--;
-        if (sparkCount == 0 && visualEffect) {
-            IGregTechTileEntity mte = getBaseMetaTileEntity();
-            sparkCount = 10;
-            if (!sparkList.isEmpty()) {
-                NetworkDispatcher.INSTANCE.sendToAllAround(
-                        new RendererMessage.RendererData(sparkList),
-                        mte.getWorld().provider.dimensionId,
-                        mte.getXCoord(),
-                        mte.getYCoord(),
-                        mte.getZCoord(),
-                        256);
-                sparkList.clear();
-            }
-        }
         return true;
     }
 
