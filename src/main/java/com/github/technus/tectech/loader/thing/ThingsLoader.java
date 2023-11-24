@@ -13,7 +13,6 @@ import com.github.technus.tectech.thing.casing.SpacetimeCompressionFieldCasing;
 import com.github.technus.tectech.thing.casing.StabilisationFieldCasing;
 import com.github.technus.tectech.thing.casing.TT_Container_Casings;
 import com.github.technus.tectech.thing.casing.TimeAccelerationFieldCasing;
-import com.github.technus.tectech.thing.item.EnderFluidLinkCover;
 import com.github.technus.tectech.thing.item.EuMeterGT;
 import com.github.technus.tectech.thing.item.ParametrizerMemoryCard;
 import com.github.technus.tectech.thing.item.PowerPassUpgradeCover;
@@ -70,7 +69,6 @@ public class ThingsLoader implements Runnable {
         TeslaStaff.run();
         TeslaCoilCover.run();
         TeslaCoilCapacitor.run();
-        EnderFluidLinkCover.run();
         PowerPassUpgradeCover.run();
         TecTech.LOGGER.info("Useful Items registered");
 

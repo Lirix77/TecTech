@@ -3,11 +3,9 @@ package com.github.technus.tectech.loader.thing;
 import net.minecraft.item.ItemStack;
 
 import com.github.technus.tectech.TecTech;
-import com.github.technus.tectech.thing.cover.GT_Cover_TM_EnderFluidLink;
 import com.github.technus.tectech.thing.cover.GT_Cover_TM_PowerPassUpgrade;
 import com.github.technus.tectech.thing.cover.GT_Cover_TM_TeslaCoil;
 import com.github.technus.tectech.thing.cover.GT_Cover_TM_TeslaCoil_Ultimate;
-import com.github.technus.tectech.thing.item.EnderFluidLinkCover;
 import com.github.technus.tectech.thing.item.PowerPassUpgradeCover;
 import com.github.technus.tectech.thing.item.TeslaCoilCover;
 
@@ -35,10 +33,6 @@ public class CoverLoader implements Runnable {
                 new ItemStack(TeslaCoilCover.INSTANCE, 1, 1),
                 new GT_RenderedTexture(TESLA_OVERLAY_ULTIMATE),
                 new GT_Cover_TM_TeslaCoil_Ultimate());
-        GregTech_API.registerCover(
-                new ItemStack(EnderFluidLinkCover.INSTANCE, 1, 0),
-                new GT_RenderedTexture(ENDERFLUIDLINK_OVERLAY),
-                new GT_Cover_TM_EnderFluidLink());
         GregTech_API.registerCover(
                 new ItemStack(PowerPassUpgradeCover.INSTANCE, 1, 0),
                 new GT_RenderedTexture(POWERPASSUPGRADE_OVERLAY),
