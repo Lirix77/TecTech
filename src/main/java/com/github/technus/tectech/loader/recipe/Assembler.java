@@ -1,6 +1,5 @@
 package com.github.technus.tectech.loader.recipe;
 
-import static com.github.technus.tectech.loader.recipe.BaseRecipeLoader.getItemContainer;
 import static com.github.technus.tectech.loader.recipe.BaseRecipeLoader.getOrDefault;
 import static gregtech.api.enums.GT_Values.RA;
 import static gregtech.api.enums.Mods.BartWorks;
@@ -140,7 +139,7 @@ public class Assembler implements Runnable {
         // Tesla Secondary Windings
         GT_Values.RA.addAssemblerRecipe(
                 new ItemStack[] { CustomItemList.teslaComponent.getWithDamage(8, 0),
-                        getItemContainer("MicaInsulatorFoil").get(12) },
+                        ItemList.MicaInsulatorFoil.get(12) },
                 Materials.Silver.getMolten(144),
                 CustomItemList.tM_TeslaSecondary.get(1),
                 200,
@@ -149,7 +148,7 @@ public class Assembler implements Runnable {
         // Tesla Primary Coils T0
         GT_Values.RA.addAssemblerRecipe(
                 new ItemStack[] { GT_OreDictUnificator.get(OrePrefixes.wireGt02, Materials.RedstoneAlloy, 8),
-                        getItemContainer("MicaInsulatorFoil").get(8) },
+                        ItemList.MicaInsulatorFoil.get(8) },
                 Materials.RedAlloy.getMolten(144),
                 CustomItemList.tM_TeslaPrimary_0.get(1),
                 200,
@@ -158,7 +157,7 @@ public class Assembler implements Runnable {
         // Tesla Primary Coils T1
         GT_Values.RA.addAssemblerRecipe(
                 new ItemStack[] { GT_OreDictUnificator.get(OrePrefixes.wireGt02, Materials.SuperconductorMV, 8),
-                        getItemContainer("MicaInsulatorFoil").get(12) },
+                        ItemList.MicaInsulatorFoil.get(12) },
                 Materials.Magnesium.getMolten(144),
                 CustomItemList.tM_TeslaPrimary_1.get(1),
                 200,
@@ -167,7 +166,7 @@ public class Assembler implements Runnable {
         // Tesla Primary Coils T2
         GT_Values.RA.addAssemblerRecipe(
                 new ItemStack[] { GT_OreDictUnificator.get(OrePrefixes.wireGt02, Materials.SuperconductorHV, 8),
-                        getItemContainer("MicaInsulatorFoil").get(16) },
+                        ItemList.MicaInsulatorFoil.get(16) },
                 Materials.Barium.getMolten(144),
                 CustomItemList.tM_TeslaPrimary_2.get(1),
                 200,
@@ -176,7 +175,7 @@ public class Assembler implements Runnable {
         // Tesla Primary Coils T3
         GT_Values.RA.addAssemblerRecipe(
                 new ItemStack[] { GT_OreDictUnificator.get(OrePrefixes.wireGt02, Materials.SuperconductorEV, 8),
-                        getItemContainer("MicaInsulatorFoil").get(20) },
+                        ItemList.MicaInsulatorFoil.get(20) },
                 Materials.Platinum.getMolten(144),
                 CustomItemList.tM_TeslaPrimary_3.get(1),
                 200,
@@ -185,7 +184,7 @@ public class Assembler implements Runnable {
         // Tesla Primary Coils T4
         GT_Values.RA.addAssemblerRecipe(
                 new ItemStack[] { GT_OreDictUnificator.get(OrePrefixes.wireGt02, Materials.SuperconductorIV, 8),
-                        getItemContainer("MicaInsulatorFoil").get(24) },
+                        ItemList.MicaInsulatorFoil.get(24) },
                 Materials.Vanadium.getMolten(144),
                 CustomItemList.tM_TeslaPrimary_4.get(1),
                 200,
@@ -194,7 +193,7 @@ public class Assembler implements Runnable {
         // Tesla Primary Coils T5
         GT_Values.RA.addAssemblerRecipe(
                 new ItemStack[] { GT_OreDictUnificator.get(OrePrefixes.wireGt02, Materials.SuperconductorLuV, 8),
-                        getItemContainer("MicaInsulatorFoil").get(28) },
+                        ItemList.MicaInsulatorFoil.get(28) },
                 Materials.Indium.getMolten(144),
                 CustomItemList.tM_TeslaPrimary_5.get(1),
                 200,
@@ -203,7 +202,7 @@ public class Assembler implements Runnable {
         // Tesla Primary Coils T6
         GT_Values.RA.addAssemblerRecipe(
                 new ItemStack[] { GT_OreDictUnificator.get(OrePrefixes.wireGt02, Materials.SuperconductorZPM, 8),
-                        getItemContainer("MicaInsulatorFoil").get(32) },
+                        ItemList.MicaInsulatorFoil.get(32) },
                 Materials.Naquadah.getMolten(144),
                 CustomItemList.tM_TeslaPrimary_6.get(1),
                 200,
@@ -278,7 +277,7 @@ public class Assembler implements Runnable {
 
                 // Dynamo UEV 4A
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hatch_Dynamo_UEV").get(1),
+                        new ItemStack[] { ItemList.Hatch_Dynamo_UEV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt04, Materials.Draconium, 2),
                                 GT_OreDictUnificator
                                         .get(OrePrefixes.plate, getOrDefault("Bedrockium", Materials.Neutronium), 2) },
@@ -289,7 +288,7 @@ public class Assembler implements Runnable {
 
                 // Dynamo UIV 4A
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hatch_Dynamo_UIV").get(1),
+                        new ItemStack[] { ItemList.Hatch_Dynamo_UIV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt04, Materials.NetherStar, 2),
                                 GT_OreDictUnificator.get(
                                         OrePrefixes.plate,
@@ -302,7 +301,7 @@ public class Assembler implements Runnable {
 
                 // Dynamo UMV 4A
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hatch_Dynamo_UMV").get(1),
+                        new ItemStack[] { ItemList.Hatch_Dynamo_UMV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt04, Materials.Quantium, 2),
                                 GT_OreDictUnificator.get(OrePrefixes.plate, MaterialsUEVplus.SpaceTime, 2) },
                         Materials.Silver.getMolten(9216),
@@ -312,7 +311,7 @@ public class Assembler implements Runnable {
 
                 // Dynamo UXV 4A
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hatch_Dynamo_UXV").get(1),
+                        new ItemStack[] { ItemList.Hatch_Dynamo_UXV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt04, Materials.BlackPlutonium, 2),
                                 GT_OreDictUnificator.get(
                                         OrePrefixes.plate,
@@ -383,7 +382,7 @@ public class Assembler implements Runnable {
 
                 // Dynamo UHV 16A
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Transformer_UEV_UHV").get(1),
+                        new ItemStack[] { ItemList.Transformer_UEV_UHV.get(1),
                                 CustomItemList.eM_dynamoMulti4_UHV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt08, Materials.SuperconductorUHV, 2),
                                 GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Neutronium, 4) },
@@ -394,7 +393,7 @@ public class Assembler implements Runnable {
 
                 // Dynamo UEV 16A
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Transformer_UIV_UEV").get(1),
+                        new ItemStack[] { ItemList.Transformer_UIV_UEV.get(1),
                                 CustomItemList.eM_dynamoMulti4_UEV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt08, Materials.Draconium, 2),
                                 GT_OreDictUnificator
@@ -406,7 +405,7 @@ public class Assembler implements Runnable {
 
                 // Dynamo UIV 16A
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Transformer_UMV_UIV").get(1),
+                        new ItemStack[] { ItemList.Transformer_UMV_UIV.get(1),
                                 CustomItemList.eM_dynamoMulti4_UIV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt08, Materials.NetherStar, 2),
                                 GT_OreDictUnificator.get(
@@ -420,7 +419,7 @@ public class Assembler implements Runnable {
 
                 // Dynamo UMV 16A
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Transformer_UXV_UMV").get(1),
+                        new ItemStack[] { ItemList.Transformer_UXV_UMV.get(1),
                                 CustomItemList.eM_dynamoMulti4_UMV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt08, Materials.Quantium, 2),
                                 GT_OreDictUnificator.get(OrePrefixes.plate, MaterialsUEVplus.SpaceTime, 4) },
@@ -431,7 +430,7 @@ public class Assembler implements Runnable {
 
                 // Dynamo UXV 16A
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Transformer_MAX_UXV").get(1),
+                        new ItemStack[] { ItemList.Transformer_MAX_UXV.get(1),
                                 CustomItemList.eM_dynamoMulti4_UXV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt08, Materials.BlackPlutonium, 2),
                                 GT_OreDictUnificator.get(
@@ -449,8 +448,7 @@ public class Assembler implements Runnable {
             {
                 // Dynamo EV 64A
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("WetTransformer_IV_EV").get(1),
-                                CustomItemList.eM_dynamoMulti16_EV.get(1),
+                        new ItemStack[] { null, CustomItemList.eM_dynamoMulti16_EV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt12, Materials.Aluminium, 2),
                                 GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Titanium, 6) },
                         Materials.Tungsten.getMolten(144),
@@ -460,8 +458,7 @@ public class Assembler implements Runnable {
 
                 // Dynamo IV 64A
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("WetTransformer_LuV_IV").get(1),
-                                CustomItemList.eM_dynamoMulti16_IV.get(1),
+                        new ItemStack[] { null, CustomItemList.eM_dynamoMulti16_IV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt12, Materials.Tungsten, 2),
                                 GT_OreDictUnificator.get(OrePrefixes.plate, Materials.TungstenSteel, 6) },
                         Materials.Tungsten.getMolten(144),
@@ -471,8 +468,7 @@ public class Assembler implements Runnable {
 
                 // Dynamo LuV 64A
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("WetTransformer_ZPM_LuV").get(1),
-                                CustomItemList.eM_dynamoMulti16_LuV.get(1),
+                        new ItemStack[] { null, CustomItemList.eM_dynamoMulti16_LuV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt12, Materials.VanadiumGallium, 2),
                                 GT_OreDictUnificator.get(
                                         OrePrefixes.plate,
@@ -485,8 +481,7 @@ public class Assembler implements Runnable {
 
                 // Dynamo ZPM 64A
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("WetTransformer_UV_ZPM").get(1),
-                                CustomItemList.eM_dynamoMulti16_ZPM.get(1),
+                        new ItemStack[] { null, CustomItemList.eM_dynamoMulti16_ZPM.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt12, Materials.Naquadah, 2),
                                 GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Iridium, 6) },
                         Materials.Tungsten.getMolten(576),
@@ -496,8 +491,7 @@ public class Assembler implements Runnable {
 
                 // Dynamo UV 64A
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("WetTransformer_UHV_UV").get(1),
-                                CustomItemList.eM_dynamoMulti16_UV.get(1),
+                        new ItemStack[] { null, CustomItemList.eM_dynamoMulti16_UV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt12, Materials.NaquadahAlloy, 2),
                                 GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Osmium, 6) },
                         Materials.Tungsten.getMolten(1152),
@@ -507,8 +501,7 @@ public class Assembler implements Runnable {
 
                 // Dynamo UHV 64A
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("WetTransformer_UEV_UHV").get(1),
-                                CustomItemList.eM_dynamoMulti16_UHV.get(1),
+                        new ItemStack[] { null, CustomItemList.eM_dynamoMulti16_UHV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt12, Materials.SuperconductorUHV, 2),
                                 GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Neutronium, 6) },
                         Materials.Tungsten.getMolten(2304),
@@ -518,8 +511,7 @@ public class Assembler implements Runnable {
 
                 // Dynamo UEV 64A
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("WetTransformer_UIV_UEV").get(1),
-                                CustomItemList.eM_dynamoMulti16_UEV.get(1),
+                        new ItemStack[] { null, CustomItemList.eM_dynamoMulti16_UEV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt12, Materials.Draconium, 2),
                                 GT_OreDictUnificator
                                         .get(OrePrefixes.plate, getOrDefault("Bedrockium", Materials.Neutronium), 6) },
@@ -530,8 +522,7 @@ public class Assembler implements Runnable {
 
                 // Dynamo UIV 64A
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("WetTransformer_UMV_UIV").get(1),
-                                CustomItemList.eM_dynamoMulti16_UIV.get(1),
+                        new ItemStack[] { null, CustomItemList.eM_dynamoMulti16_UIV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt12, Materials.NetherStar, 2),
                                 GT_OreDictUnificator.get(
                                         OrePrefixes.plate,
@@ -544,8 +535,7 @@ public class Assembler implements Runnable {
 
                 // Dynamo UMV 64A
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("WetTransformer_UXV_UMV").get(1),
-                                CustomItemList.eM_dynamoMulti16_UMV.get(1),
+                        new ItemStack[] { null, CustomItemList.eM_dynamoMulti16_UMV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt12, Materials.Quantium, 2),
                                 GT_OreDictUnificator.get(OrePrefixes.plate, MaterialsUEVplus.SpaceTime, 6) },
                         Materials.Tungsten.getMolten(9216),
@@ -555,8 +545,7 @@ public class Assembler implements Runnable {
 
                 // Dynamo UXV 64A
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("WetTransformer_MAX_UXV").get(1),
-                                CustomItemList.eM_dynamoMulti16_UXV.get(1),
+                        new ItemStack[] { null, CustomItemList.eM_dynamoMulti16_UXV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt12, Materials.BlackPlutonium, 2),
                                 GT_OreDictUnificator.get(
                                         OrePrefixes.plate,
@@ -639,7 +628,7 @@ public class Assembler implements Runnable {
 
                 // Energy Hatch UEV 4A
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hatch_Energy_UEV").get(1),
+                        new ItemStack[] { ItemList.Hatch_Energy_UEV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt04, Materials.Draconium, 2),
                                 GT_OreDictUnificator
                                         .get(OrePrefixes.plate, getOrDefault("Bedrockium", Materials.Neutronium), 2) },
@@ -650,7 +639,7 @@ public class Assembler implements Runnable {
 
                 // Energy Hatch UIV 4A
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hatch_Energy_UIV").get(1),
+                        new ItemStack[] { ItemList.Hatch_Energy_UIV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt04, Materials.NetherStar, 2),
                                 GT_OreDictUnificator.get(
                                         OrePrefixes.plate,
@@ -663,7 +652,7 @@ public class Assembler implements Runnable {
 
                 // Energy Hatch UMV 4A
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hatch_Energy_UMV").get(1),
+                        new ItemStack[] { ItemList.Hatch_Energy_UMV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt04, Materials.Quantium, 2),
                                 GT_OreDictUnificator.get(OrePrefixes.plate, MaterialsUEVplus.SpaceTime, 2) },
                         Materials.Silver.getMolten(9216),
@@ -673,7 +662,7 @@ public class Assembler implements Runnable {
 
                 // Energy Hatch UXV 4A
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hatch_Energy_UXV").get(1),
+                        new ItemStack[] { ItemList.Hatch_Energy_UXV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt04, Materials.BlackPlutonium, 2),
                                 GT_OreDictUnificator.get(
                                         OrePrefixes.plate,
@@ -744,7 +733,7 @@ public class Assembler implements Runnable {
 
                 // Energy Hatch UHV 16A
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Transformer_UEV_UHV").get(1),
+                        new ItemStack[] { ItemList.Transformer_UEV_UHV.get(1),
                                 CustomItemList.eM_energyMulti4_UHV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt08, Materials.SuperconductorUHV, 2),
                                 GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Neutronium, 4) },
@@ -755,7 +744,7 @@ public class Assembler implements Runnable {
 
                 // Energy Hatch UEV 16A
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Transformer_UIV_UEV").get(1),
+                        new ItemStack[] { ItemList.Transformer_UIV_UEV.get(1),
                                 CustomItemList.eM_energyMulti4_UEV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt08, Materials.Draconium, 2),
                                 GT_OreDictUnificator
@@ -767,7 +756,7 @@ public class Assembler implements Runnable {
 
                 // Energy Hatch UIV 16A
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Transformer_UMV_UIV").get(1),
+                        new ItemStack[] { ItemList.Transformer_UMV_UIV.get(1),
                                 CustomItemList.eM_energyMulti4_UIV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt08, Materials.NetherStar, 2),
                                 GT_OreDictUnificator.get(
@@ -781,7 +770,7 @@ public class Assembler implements Runnable {
 
                 // Energy Hatch UMV 16A
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Transformer_UXV_UMV").get(1),
+                        new ItemStack[] { ItemList.Transformer_UXV_UMV.get(1),
                                 CustomItemList.eM_energyMulti4_UMV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt08, Materials.Quantium, 2),
                                 GT_OreDictUnificator.get(OrePrefixes.plate, MaterialsUEVplus.SpaceTime, 4) },
@@ -792,7 +781,7 @@ public class Assembler implements Runnable {
 
                 // Energy Hatch UXV 16A
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Transformer_MAX_UXV").get(1),
+                        new ItemStack[] { ItemList.Transformer_MAX_UXV.get(1),
                                 CustomItemList.eM_energyMulti4_UXV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt08, Materials.BlackPlutonium, 2),
                                 GT_OreDictUnificator.get(
@@ -810,8 +799,7 @@ public class Assembler implements Runnable {
             {
                 // Energy Hatch EV 64A
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("WetTransformer_IV_EV").get(1),
-                                CustomItemList.eM_energyMulti16_EV.get(1),
+                        new ItemStack[] { ItemList.Transformer_IV_EV.get(1), CustomItemList.eM_energyMulti16_EV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt12, Materials.Aluminium, 2),
                                 GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Titanium, 6) },
                         Materials.Tungsten.getMolten(144),
@@ -821,8 +809,7 @@ public class Assembler implements Runnable {
 
                 // Energy Hatch IV 64A
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("WetTransformer_LuV_IV").get(1),
-                                CustomItemList.eM_energyMulti16_IV.get(1),
+                        new ItemStack[] { ItemList.Transformer_LuV_IV.get(1), CustomItemList.eM_energyMulti16_IV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt12, Materials.Tungsten, 2),
                                 GT_OreDictUnificator.get(OrePrefixes.plate, Materials.TungstenSteel, 6) },
                         Materials.Tungsten.getMolten(144),
@@ -832,7 +819,7 @@ public class Assembler implements Runnable {
 
                 // Energy Hatch LuV 64A
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("WetTransformer_ZPM_LuV").get(1),
+                        new ItemStack[] { ItemList.Transformer_ZPM_LuV.get(1),
                                 CustomItemList.eM_energyMulti16_LuV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt12, Materials.VanadiumGallium, 2),
                                 GT_OreDictUnificator.get(
@@ -846,7 +833,7 @@ public class Assembler implements Runnable {
 
                 // Energy Hatch ZPM 64A
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("WetTransformer_UV_ZPM").get(1),
+                        new ItemStack[] { ItemList.Transformer_UV_ZPM.get(1),
                                 CustomItemList.eM_energyMulti16_ZPM.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt12, Materials.Naquadah, 2),
                                 GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Iridium, 6) },
@@ -857,8 +844,7 @@ public class Assembler implements Runnable {
 
                 // Energy Hatch UV 64A
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("WetTransformer_UHV_UV").get(1),
-                                CustomItemList.eM_energyMulti16_UV.get(1),
+                        new ItemStack[] { ItemList.Transformer_UV_ZPM.get(1), CustomItemList.eM_energyMulti16_UV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt12, Materials.NaquadahAlloy, 2),
                                 GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Osmium, 6) },
                         Materials.Tungsten.getMolten(1152),
@@ -868,7 +854,7 @@ public class Assembler implements Runnable {
 
                 // Energy Hatch UHV 64A
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("WetTransformer_UEV_UHV").get(1),
+                        new ItemStack[] { ItemList.Transformer_UEV_UHV.get(1),
                                 CustomItemList.eM_energyMulti16_UHV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt12, Materials.SuperconductorUHV, 2),
                                 GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Neutronium, 6) },
@@ -879,7 +865,7 @@ public class Assembler implements Runnable {
 
                 // Energy Hatch UEV 64A
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("WetTransformer_UIV_UEV").get(1),
+                        new ItemStack[] { ItemList.Transformer_UIV_UEV.get(1),
                                 CustomItemList.eM_energyMulti16_UEV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt12, Materials.Draconium, 2),
                                 GT_OreDictUnificator
@@ -891,7 +877,7 @@ public class Assembler implements Runnable {
 
                 // Energy Hatch UIV 64A
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("WetTransformer_UMV_UIV").get(1),
+                        new ItemStack[] { ItemList.Transformer_UMV_UIV.get(1),
                                 CustomItemList.eM_energyMulti16_UIV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt12, Materials.NetherStar, 2),
                                 GT_OreDictUnificator.get(
@@ -905,7 +891,7 @@ public class Assembler implements Runnable {
 
                 // Energy Hatch UMV 64A
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("WetTransformer_UXV_UMV").get(1),
+                        new ItemStack[] { ItemList.Transformer_UXV_UMV.get(1),
                                 CustomItemList.eM_energyMulti16_UMV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt12, Materials.Quantium, 2),
                                 GT_OreDictUnificator.get(OrePrefixes.plate, MaterialsUEVplus.SpaceTime, 6) },
@@ -916,7 +902,7 @@ public class Assembler implements Runnable {
 
                 // Energy Hatch UXV 64A
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("WetTransformer_MAX_UXV").get(1),
+                        new ItemStack[] { ItemList.Transformer_MAX_UXV.get(1),
                                 CustomItemList.eM_energyMulti16_UXV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt12, Materials.BlackPlutonium, 2),
                                 GT_OreDictUnificator.get(
@@ -936,7 +922,7 @@ public class Assembler implements Runnable {
         if (BartWorks.isModLoaded()) {
             // Buck Converter IV
             GT_Values.RA.addAssemblerRecipe(
-                    new ItemStack[] { ItemList.Transformer_LuV_IV.get(1), getItemContainer("Display").get(1),
+                    new ItemStack[] { ItemList.Transformer_LuV_IV.get(1), ItemList.Cover_Screen.get(1),
                             GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Elite, 2),
                             GT_OreDictUnificator.get(OrePrefixes.plate, Materials.TungstenSteel, 2),
                             GT_OreDictUnificator.get(OrePrefixes.wireGt16, Materials.TungstenSteel, 4),
@@ -948,7 +934,7 @@ public class Assembler implements Runnable {
 
             // Buck Converter LuV
             GT_Values.RA.addAssemblerRecipe(
-                    new ItemStack[] { ItemList.Transformer_ZPM_LuV.get(1), getItemContainer("Display").get(1),
+                    new ItemStack[] { ItemList.Transformer_ZPM_LuV.get(1), ItemList.Cover_Screen.get(1),
                             GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Master, 2),
                             GT_OreDictUnificator.get(
                                     OrePrefixes.plate,
@@ -963,7 +949,7 @@ public class Assembler implements Runnable {
 
             // Buck Converter ZPM
             GT_Values.RA.addAssemblerRecipe(
-                    new ItemStack[] { ItemList.Transformer_UV_ZPM.get(1), getItemContainer("Display").get(1),
+                    new ItemStack[] { ItemList.Transformer_UV_ZPM.get(1), ItemList.Cover_Screen.get(1),
                             GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Ultimate, 2),
                             GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Iridium, 2),
                             GT_OreDictUnificator.get(OrePrefixes.wireGt16, Materials.TungstenSteel, 4),
@@ -975,7 +961,7 @@ public class Assembler implements Runnable {
 
             // Buck Converter UV
             GT_Values.RA.addAssemblerRecipe(
-                    new ItemStack[] { ItemList.Transformer_MAX_UV.get(1), getItemContainer("Display").get(1),
+                    new ItemStack[] { ItemList.Transformer_MAX_UV.get(1), ItemList.Cover_Screen.get(1),
                             GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.SuperconductorUHV, 2),
                             GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Osmium, 2),
                             GT_OreDictUnificator.get(OrePrefixes.wireGt16, Materials.Naquadah, 4),
@@ -987,8 +973,7 @@ public class Assembler implements Runnable {
 
             // Buck Converter UHV
             GT_Values.RA.addAssemblerRecipe(
-                    new ItemStack[] { getItemContainer("Transformer_UEV_UHV").get(1),
-                            getItemContainer("Display").get(1),
+                    new ItemStack[] { ItemList.Transformer_UEV_UHV.get(1), ItemList.Cover_Screen.get(1),
                             GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Infinite, 2),
                             GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Neutronium, 2),
                             GT_OreDictUnificator.get(OrePrefixes.wireGt16, Materials.ElectrumFlux, 4),
@@ -1000,8 +985,7 @@ public class Assembler implements Runnable {
 
             // Buck Converter UEV
             GT_Values.RA.addAssemblerRecipe(
-                    new ItemStack[] { getItemContainer("Transformer_UIV_UEV").get(1),
-                            getItemContainer("Display").get(1),
+                    new ItemStack[] { ItemList.Transformer_UIV_UEV.get(1), ItemList.Cover_Screen.get(1),
                             GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Bio, 2),
                             GT_OreDictUnificator
                                     .get(OrePrefixes.plate, getOrDefault("Bedrockium", Materials.Neutronium), 2),
@@ -1014,8 +998,7 @@ public class Assembler implements Runnable {
 
             // Buck Converter UIV
             GT_Values.RA.addAssemblerRecipe(
-                    new ItemStack[] { getItemContainer("Transformer_UMV_UIV").get(1),
-                            getItemContainer("Display").get(1),
+                    new ItemStack[] { ItemList.Transformer_UMV_UIV.get(1), ItemList.Cover_Screen.get(1),
                             GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Optical, 2),
                             GT_OreDictUnificator
                                     .get(OrePrefixes.plate, getOrDefault("BlackPlutonium", Materials.Neutronium), 2),
@@ -1082,7 +1065,7 @@ public class Assembler implements Runnable {
                         1000,
                         2000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UEV").get(1),
+                        new ItemStack[] { ItemList.Hull_UEV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 1),
                                 ItemList.Emitter_UEV.get(1), ItemList.Electric_Pump_UEV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.Draconium, 2),
@@ -1092,7 +1075,7 @@ public class Assembler implements Runnable {
                         1000,
                         8000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UIV").get(1),
+                        new ItemStack[] { ItemList.Hull_UIV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 1),
                                 ItemList.Emitter_UIV.get(1), ItemList.Electric_Pump_UIV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.NetherStar, 2),
@@ -1102,7 +1085,7 @@ public class Assembler implements Runnable {
                         1000,
                         32000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UMV").get(1),
+                        new ItemStack[] { ItemList.Hull_UMV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 1),
                                 ItemList.Emitter_UMV.get(1), ItemList.Electric_Pump_UMV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.Quantium, 2),
@@ -1112,7 +1095,7 @@ public class Assembler implements Runnable {
                         1000,
                         128000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UXV").get(1),
+                        new ItemStack[] { ItemList.Hull_UXV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 1),
                                 ItemList.Emitter_UXV.get(1), ItemList.Electric_Pump_UXV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.BlackPlutonium, 2),
@@ -1176,7 +1159,7 @@ public class Assembler implements Runnable {
                         2000,
                         2000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UEV").get(1),
+                        new ItemStack[] { ItemList.Hull_UEV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 2),
                                 ItemList.Emitter_UEV.get(2), ItemList.Electric_Pump_UEV.get(2),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt02, Materials.Draconium, 4),
@@ -1186,7 +1169,7 @@ public class Assembler implements Runnable {
                         2000,
                         8000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UIV").get(1),
+                        new ItemStack[] { ItemList.Hull_UIV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 2),
                                 ItemList.Emitter_UIV.get(2), ItemList.Electric_Pump_UIV.get(2),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt02, Materials.NetherStar, 4),
@@ -1196,7 +1179,7 @@ public class Assembler implements Runnable {
                         2000,
                         32000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UMV").get(1),
+                        new ItemStack[] { ItemList.Hull_UMV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 2),
                                 ItemList.Emitter_UMV.get(2), ItemList.Electric_Pump_UMV.get(2),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt02, Materials.Quantium, 4),
@@ -1206,7 +1189,7 @@ public class Assembler implements Runnable {
                         2000,
                         128000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UXV").get(1),
+                        new ItemStack[] { ItemList.Hull_UXV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 2),
                                 ItemList.Emitter_UXV.get(2), ItemList.Electric_Pump_UXV.get(2),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt02, Materials.BlackPlutonium, 4),
@@ -1270,7 +1253,7 @@ public class Assembler implements Runnable {
                         4000,
                         2000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UEV").get(1),
+                        new ItemStack[] { ItemList.Hull_UEV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 4),
                                 ItemList.Emitter_UEV.get(4), ItemList.Electric_Pump_UEV.get(4),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt04, Materials.Draconium, 4),
@@ -1280,7 +1263,7 @@ public class Assembler implements Runnable {
                         4000,
                         8000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UIV").get(1),
+                        new ItemStack[] { ItemList.Hull_UIV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 4),
                                 ItemList.Emitter_UIV.get(4), ItemList.Electric_Pump_UIV.get(4),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt04, Materials.NetherStar, 4),
@@ -1290,7 +1273,7 @@ public class Assembler implements Runnable {
                         4000,
                         32000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UMV").get(1),
+                        new ItemStack[] { ItemList.Hull_UMV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 4),
                                 ItemList.Emitter_UMV.get(4), ItemList.Electric_Pump_UMV.get(4),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt04, Materials.Quantium, 4),
@@ -1300,7 +1283,7 @@ public class Assembler implements Runnable {
                         4000,
                         128000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UXV").get(1),
+                        new ItemStack[] { ItemList.Hull_UXV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 4),
                                 ItemList.Emitter_UXV.get(4), ItemList.Electric_Pump_UXV.get(4),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt04, Materials.BlackPlutonium, 4),
@@ -1364,7 +1347,7 @@ public class Assembler implements Runnable {
                         8000,
                         2000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UEV").get(1),
+                        new ItemStack[] { ItemList.Hull_UEV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 8),
                                 ItemList.Emitter_UEV.get(8), ItemList.Electric_Pump_UEV.get(8),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt04, Materials.Draconium, 8),
@@ -1374,7 +1357,7 @@ public class Assembler implements Runnable {
                         8000,
                         8000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UIV").get(1),
+                        new ItemStack[] { ItemList.Hull_UIV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 8),
                                 ItemList.Emitter_UIV.get(8), ItemList.Electric_Pump_UIV.get(8),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt04, Materials.NetherStar, 8),
@@ -1384,7 +1367,7 @@ public class Assembler implements Runnable {
                         8000,
                         32000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UMV").get(1),
+                        new ItemStack[] { ItemList.Hull_UMV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 4),
                                 ItemList.Emitter_UMV.get(8), ItemList.Electric_Pump_UMV.get(8),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt04, Materials.Quantium, 8),
@@ -1394,7 +1377,7 @@ public class Assembler implements Runnable {
                         8000,
                         128000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UXV").get(1),
+                        new ItemStack[] { ItemList.Hull_UXV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 4),
                                 ItemList.Emitter_UXV.get(8), ItemList.Electric_Pump_UXV.get(8),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt04, Materials.BlackPlutonium, 8),
@@ -1458,7 +1441,7 @@ public class Assembler implements Runnable {
                         16000,
                         2000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UEV").get(1),
+                        new ItemStack[] { ItemList.Hull_UEV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 16),
                                 ItemList.Emitter_UEV.get(16), ItemList.Electric_Pump_UEV.get(16),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt08, Materials.Draconium, 8),
@@ -1468,7 +1451,7 @@ public class Assembler implements Runnable {
                         16000,
                         8000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UIV").get(1),
+                        new ItemStack[] { ItemList.Hull_UIV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 16),
                                 ItemList.Emitter_UIV.get(16), ItemList.Electric_Pump_UIV.get(16),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt08, Materials.NetherStar, 8),
@@ -1478,7 +1461,7 @@ public class Assembler implements Runnable {
                         16000,
                         32000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UMV").get(1),
+                        new ItemStack[] { ItemList.Hull_UMV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 16),
                                 ItemList.Emitter_UMV.get(16), ItemList.Electric_Pump_UMV.get(16),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt08, Materials.Quantium, 8),
@@ -1488,7 +1471,7 @@ public class Assembler implements Runnable {
                         16000,
                         128000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UXV").get(1),
+                        new ItemStack[] { ItemList.Hull_UXV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 16),
                                 ItemList.Emitter_UXV.get(16), ItemList.Electric_Pump_UXV.get(16),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt08, Materials.BlackPlutonium, 8),
@@ -1552,7 +1535,7 @@ public class Assembler implements Runnable {
                         32000,
                         2000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UEV").get(1),
+                        new ItemStack[] { ItemList.Hull_UEV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 32),
                                 ItemList.Emitter_UEV.get(32), ItemList.Electric_Pump_UEV.get(32),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt08, Materials.Draconium, 16),
@@ -1562,7 +1545,7 @@ public class Assembler implements Runnable {
                         32000,
                         8000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UIV").get(1),
+                        new ItemStack[] { ItemList.Hull_UIV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 32),
                                 ItemList.Emitter_UIV.get(32), ItemList.Electric_Pump_UIV.get(32),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt08, Materials.NetherStar, 16),
@@ -1572,7 +1555,7 @@ public class Assembler implements Runnable {
                         32000,
                         32000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UMV").get(1),
+                        new ItemStack[] { ItemList.Hull_UMV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 32),
                                 ItemList.Emitter_UMV.get(32), ItemList.Electric_Pump_UMV.get(32),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt08, Materials.Quantium, 16),
@@ -1582,7 +1565,7 @@ public class Assembler implements Runnable {
                         32000,
                         128000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UXV").get(1),
+                        new ItemStack[] { ItemList.Hull_UXV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 32),
                                 ItemList.Emitter_UXV.get(32), ItemList.Electric_Pump_UXV.get(32),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt08, Materials.BlackPlutonium, 16),
@@ -1646,7 +1629,7 @@ public class Assembler implements Runnable {
                         64000,
                         2000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UEV").get(1),
+                        new ItemStack[] { ItemList.Hull_UEV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 64),
                                 ItemList.Emitter_UEV.get(64), ItemList.Electric_Pump_UEV.get(64),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt16, Materials.Draconium, 16),
@@ -1656,7 +1639,7 @@ public class Assembler implements Runnable {
                         64000,
                         8000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UIV").get(1),
+                        new ItemStack[] { ItemList.Hull_UIV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 64),
                                 ItemList.Emitter_UIV.get(64), ItemList.Electric_Pump_UIV.get(64),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt16, Materials.NetherStar, 16),
@@ -1666,7 +1649,7 @@ public class Assembler implements Runnable {
                         64000,
                         32000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UMV").get(1),
+                        new ItemStack[] { ItemList.Hull_UMV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 64),
                                 ItemList.Emitter_UMV.get(64), ItemList.Electric_Pump_UMV.get(64),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt16, Materials.Quantium, 16),
@@ -1676,7 +1659,7 @@ public class Assembler implements Runnable {
                         64000,
                         128000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UXV").get(1),
+                        new ItemStack[] { ItemList.Hull_UXV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 64),
                                 ItemList.Emitter_UXV.get(64), ItemList.Electric_Pump_UXV.get(64),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt16, Materials.BlackPlutonium, 16),
@@ -1743,7 +1726,7 @@ public class Assembler implements Runnable {
                         1000,
                         2000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UEV").get(1),
+                        new ItemStack[] { ItemList.Hull_UEV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 1),
                                 ItemList.Sensor_UEV.get(1), ItemList.Electric_Pump_UEV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.Draconium, 2),
@@ -1753,7 +1736,7 @@ public class Assembler implements Runnable {
                         1000,
                         8000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UIV").get(1),
+                        new ItemStack[] { ItemList.Hull_UIV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 1),
                                 ItemList.Sensor_UIV.get(1), ItemList.Electric_Pump_UIV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.NetherStar, 2),
@@ -1763,7 +1746,7 @@ public class Assembler implements Runnable {
                         1000,
                         32000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UMV").get(1),
+                        new ItemStack[] { ItemList.Hull_UMV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 1),
                                 ItemList.Sensor_UMV.get(1), ItemList.Electric_Pump_UMV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.Quantium, 2),
@@ -1773,7 +1756,7 @@ public class Assembler implements Runnable {
                         1000,
                         128000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UXV").get(1),
+                        new ItemStack[] { ItemList.Hull_UXV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 1),
                                 ItemList.Sensor_UXV.get(1), ItemList.Electric_Pump_UXV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.BlackPlutonium, 2),
@@ -1837,7 +1820,7 @@ public class Assembler implements Runnable {
                         2000,
                         2000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UEV").get(1),
+                        new ItemStack[] { ItemList.Hull_UEV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 2),
                                 ItemList.Sensor_UEV.get(2), ItemList.Electric_Pump_UEV.get(2),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt02, Materials.Draconium, 4),
@@ -1847,7 +1830,7 @@ public class Assembler implements Runnable {
                         2000,
                         8000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UIV").get(1),
+                        new ItemStack[] { ItemList.Hull_UIV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 2),
                                 ItemList.Sensor_UIV.get(2), ItemList.Electric_Pump_UIV.get(2),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt02, Materials.NetherStar, 4),
@@ -1857,7 +1840,7 @@ public class Assembler implements Runnable {
                         2000,
                         32000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UMV").get(1),
+                        new ItemStack[] { ItemList.Hull_UMV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 2),
                                 ItemList.Sensor_UMV.get(2), ItemList.Electric_Pump_UMV.get(2),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt02, Materials.Quantium, 4),
@@ -1867,7 +1850,7 @@ public class Assembler implements Runnable {
                         2000,
                         128000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UXV").get(1),
+                        new ItemStack[] { ItemList.Hull_UXV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 2),
                                 ItemList.Sensor_UXV.get(2), ItemList.Electric_Pump_UXV.get(2),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt02, Materials.BlackPlutonium, 4),
@@ -1931,7 +1914,7 @@ public class Assembler implements Runnable {
                         4000,
                         2000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UEV").get(1),
+                        new ItemStack[] { ItemList.Hull_UEV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 4),
                                 ItemList.Sensor_UEV.get(4), ItemList.Electric_Pump_UEV.get(4),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt04, Materials.Draconium, 4),
@@ -1941,7 +1924,7 @@ public class Assembler implements Runnable {
                         4000,
                         8000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UIV").get(1),
+                        new ItemStack[] { ItemList.Hull_UIV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 4),
                                 ItemList.Sensor_UIV.get(4), ItemList.Electric_Pump_UIV.get(4),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt04, Materials.NetherStar, 4),
@@ -1951,7 +1934,7 @@ public class Assembler implements Runnable {
                         4000,
                         32000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UMV").get(1),
+                        new ItemStack[] { ItemList.Hull_UMV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 1),
                                 ItemList.Sensor_UMV.get(4), ItemList.Electric_Pump_UMV.get(4),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt04, Materials.Quantium, 4),
@@ -1961,7 +1944,7 @@ public class Assembler implements Runnable {
                         4000,
                         128000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UXV").get(1),
+                        new ItemStack[] { ItemList.Hull_UXV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 1),
                                 ItemList.Sensor_UXV.get(4), ItemList.Electric_Pump_UXV.get(4),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt04, Materials.BlackPlutonium, 4),
@@ -2025,7 +2008,7 @@ public class Assembler implements Runnable {
                         8000,
                         2000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UEV").get(1),
+                        new ItemStack[] { ItemList.Hull_UEV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 8),
                                 ItemList.Sensor_UEV.get(8), ItemList.Electric_Pump_UEV.get(8),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt04, Materials.Draconium, 8),
@@ -2035,7 +2018,7 @@ public class Assembler implements Runnable {
                         8000,
                         8000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UIV").get(1),
+                        new ItemStack[] { ItemList.Hull_UIV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 8),
                                 ItemList.Sensor_UIV.get(8), ItemList.Electric_Pump_UIV.get(8),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt04, Materials.NetherStar, 8),
@@ -2045,7 +2028,7 @@ public class Assembler implements Runnable {
                         8000,
                         32000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UMV").get(1),
+                        new ItemStack[] { ItemList.Hull_UMV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 8),
                                 ItemList.Sensor_UMV.get(8), ItemList.Electric_Pump_UMV.get(8),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt04, Materials.Quantium, 8),
@@ -2055,7 +2038,7 @@ public class Assembler implements Runnable {
                         8000,
                         128000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UXV").get(1),
+                        new ItemStack[] { ItemList.Hull_UXV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 8),
                                 ItemList.Sensor_UXV.get(8), ItemList.Electric_Pump_UXV.get(8),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt04, Materials.BlackPlutonium, 8),
@@ -2119,7 +2102,7 @@ public class Assembler implements Runnable {
                         16000,
                         2000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UEV").get(1),
+                        new ItemStack[] { ItemList.Hull_UEV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 16),
                                 ItemList.Sensor_UEV.get(16), ItemList.Electric_Pump_UEV.get(16),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt08, Materials.Draconium, 8),
@@ -2129,7 +2112,7 @@ public class Assembler implements Runnable {
                         16000,
                         8000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UIV").get(1),
+                        new ItemStack[] { ItemList.Hull_UIV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 16),
                                 ItemList.Sensor_UIV.get(16), ItemList.Electric_Pump_UIV.get(16),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt08, Materials.NetherStar, 8),
@@ -2139,7 +2122,7 @@ public class Assembler implements Runnable {
                         16000,
                         32000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UMV").get(1),
+                        new ItemStack[] { ItemList.Hull_UMV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 16),
                                 ItemList.Sensor_UMV.get(16), ItemList.Electric_Pump_UMV.get(16),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt08, Materials.Quantium, 8),
@@ -2149,7 +2132,7 @@ public class Assembler implements Runnable {
                         16000,
                         128000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UXV").get(1),
+                        new ItemStack[] { ItemList.Hull_UXV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 16),
                                 ItemList.Sensor_UXV.get(16), ItemList.Electric_Pump_UXV.get(16),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt08, Materials.BlackPlutonium, 8),
@@ -2213,7 +2196,7 @@ public class Assembler implements Runnable {
                         32000,
                         2000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UEV").get(1),
+                        new ItemStack[] { ItemList.Hull_UEV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 32),
                                 ItemList.Sensor_UEV.get(32), ItemList.Electric_Pump_UEV.get(32),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt08, Materials.Draconium, 16),
@@ -2223,7 +2206,7 @@ public class Assembler implements Runnable {
                         32000,
                         8000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UIV").get(1),
+                        new ItemStack[] { ItemList.Hull_UIV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 32),
                                 ItemList.Sensor_UIV.get(32), ItemList.Electric_Pump_UIV.get(32),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt08, Materials.NetherStar, 16),
@@ -2233,7 +2216,7 @@ public class Assembler implements Runnable {
                         32000,
                         32000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UMV").get(1),
+                        new ItemStack[] { ItemList.Hull_UMV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 32),
                                 ItemList.Sensor_UMV.get(32), ItemList.Electric_Pump_UMV.get(32),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt08, Materials.Quantium, 16),
@@ -2243,7 +2226,7 @@ public class Assembler implements Runnable {
                         32000,
                         128000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UXV").get(1),
+                        new ItemStack[] { ItemList.Hull_UXV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 32),
                                 ItemList.Sensor_UXV.get(32), ItemList.Electric_Pump_UXV.get(32),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt08, Materials.BlackPlutonium, 16),
@@ -2307,7 +2290,7 @@ public class Assembler implements Runnable {
                         64000,
                         2000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UEV").get(1),
+                        new ItemStack[] { ItemList.Hull_UEV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 64),
                                 ItemList.Sensor_UEV.get(64), ItemList.Electric_Pump_UEV.get(64),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt16, Materials.Draconium, 16),
@@ -2317,7 +2300,7 @@ public class Assembler implements Runnable {
                         64000,
                         8000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UIV").get(1),
+                        new ItemStack[] { ItemList.Hull_UIV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 64),
                                 ItemList.Sensor_UIV.get(64), ItemList.Electric_Pump_UIV.get(64),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt16, Materials.NetherStar, 16),
@@ -2327,7 +2310,7 @@ public class Assembler implements Runnable {
                         64000,
                         32000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UMV").get(1),
+                        new ItemStack[] { ItemList.Hull_UMV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 64),
                                 ItemList.Sensor_UMV.get(64), ItemList.Electric_Pump_UMV.get(64),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt16, Materials.Quantium, 16),
@@ -2337,7 +2320,7 @@ public class Assembler implements Runnable {
                         64000,
                         128000000);
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[] { getItemContainer("Hull_UXV").get(1),
+                        new ItemStack[] { ItemList.Hull_UXV.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 64),
                                 ItemList.Sensor_UXV.get(64), ItemList.Electric_Pump_UXV.get(64),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt16, Materials.BlackPlutonium, 16),
@@ -2485,15 +2468,6 @@ public class Assembler implements Runnable {
                 CustomItemList.teslaCover.getWithDamage(1, 1),
                 320,
                 7680);
-
-        // Ender Fluid Link Cover
-        GT_Values.RA.addAssemblerRecipe(
-                new ItemStack[] { GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Enderium, 4),
-                        ItemList.Sensor_LuV.get(1), ItemList.Emitter_LuV.get(1), ItemList.Electric_Pump_LuV.get(1), },
-                getOrDefault("Rhodium-PlatedPalladium", Materials.Chrome).getMolten(288),
-                CustomItemList.enderLinkFluidCover.getWithDamage(1, 0),
-                320,
-                30720);
 
         // Power Pass Upgrade Cover
         GT_Values.RA.addAssemblerRecipe(
@@ -2987,13 +2961,12 @@ public class Assembler implements Runnable {
 
         // Active Transformer
         GT_Values.RA.addAssemblerRecipe(
-                new ItemStack[] { getItemContainer("WetTransformer_ZPM_LuV").get(1),
-                        getItemContainer("HighEnergyFlowCircuit").get(1),
+                new ItemStack[] { ItemList.Transformer_ZPM_LuV.get(1), ItemList.HighEnergyFlowCircuit.get(1),
                         GT_OreDictUnificator.get(
                                 OrePrefixes.wireGt01,
                                 getOrDefault("SuperconductorLuV", Materials.SuperconductorUHV),
                                 16),
-                        ItemList.valueOf("Circuit_Chip_UHPIC").get(2), },
+                        ItemList.Circuit_Chip_UHPIC.get(2), },
                 Materials.TungstenSteel.getMolten(576),
                 CustomItemList.Machine_Multi_Transformer.get(1),
                 400,

@@ -1,6 +1,5 @@
 package com.github.technus.tectech.loader.recipe;
 
-import static com.github.technus.tectech.loader.recipe.BaseRecipeLoader.getItemContainer;
 import static com.github.technus.tectech.loader.recipe.BaseRecipeLoader.getOrDefault;
 import static gregtech.api.enums.GT_Values.RA;
 
@@ -100,7 +99,7 @@ public class AssemblyLine implements Runnable {
 
         // Research Station
         GT_Values.RA.addAssemblylineRecipe(
-                getItemContainer("ScannerZPM").get(1),
+                ItemList.Cover_Screen.get(1),
                 80000,
                 new Object[] { CustomItemList.Machine_Multi_Switch.get(1), ItemList.Sensor_ZPM.get(8),
                         new Object[] { OrePrefixes.circuit.get(Materials.SuperconductorUHV), 4 },

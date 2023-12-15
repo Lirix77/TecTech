@@ -1,6 +1,5 @@
 package com.github.technus.tectech.loader.recipe;
 
-import static com.github.technus.tectech.loader.recipe.BaseRecipeLoader.getItemContainer;
 import static com.google.common.math.LongMath.pow;
 import static gregtech.api.enums.Mods.*;
 import static gregtech.api.util.GT_ModHandler.getModItem;
@@ -183,7 +182,7 @@ public class ResearchStationAssemblyLine implements Runnable {
                         32,
                         100000,
                         4,
-                        new Object[] { getItemContainer("Hull_UEV").get(1L),
+                        new Object[] { ItemList.Hull_UEV.get(1L),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt04, Materials.SuperconductorUEV, 2L),
                                 ItemList.Circuit_Chip_QPIC.get(4L),
                                 new Object[] { OrePrefixes.circuit.get(Materials.Bio), 2L }, ItemList.UHV_Coil.get(4L),
@@ -191,18 +190,18 @@ public class ResearchStationAssemblyLine implements Runnable {
                                 ItemList.Reactor_Coolant_Sp_6.get(1L), ItemList.Electric_Pump_UEV.get(1L) },
                         new FluidStack[] { new FluidStack(FluidRegistry.getFluid("ic2coolant"), 32000),
                                 new FluidStack(solderUEV, 20 * 144), Materials.UUMatter.getFluid(8000L) },
-                        getItemContainer("Hatch_Energy_UEV").get(1L),
+                        ItemList.Hatch_Energy_UEV.get(1L),
                         1000,
                         8000000);
 
                 // Energy Hatch UIV
                 TT_recipeAdder.addResearchableAssemblylineRecipe(
-                        getItemContainer("Hatch_Energy_UEV").get(1L),
+                        ItemList.Hatch_Energy_UEV.get(1L),
                         96_000,
                         64,
                         200_000,
                         8,
-                        new Object[] { getItemContainer("Hull_UIV").get(1L),
+                        new Object[] { ItemList.Hull_UIV.get(1L),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt04, Materials.SuperconductorUIV, 2L),
                                 ItemList.Circuit_Chip_QPIC.get(4L),
                                 new Object[] { OrePrefixes.circuit.get(Materials.Optical), 2L },
@@ -212,51 +211,50 @@ public class ResearchStationAssemblyLine implements Runnable {
                                 ItemList.Reactor_Coolant_Sp_6.get(1L), ItemList.Electric_Pump_UIV.get(1L) },
                         new FluidStack[] { Materials.SuperCoolant.getFluid(16_000L),
                                 new FluidStack(solderUEV, 20 * 144), Materials.UUMatter.getFluid(16_000L) },
-                        getItemContainer("Hatch_Energy_UIV").get(1L),
+                        ItemList.Hatch_Energy_UIV.get(1L),
                         1000,
                         32_000_000);
 
                 // Energy Hatch UMV
                 TT_recipeAdder.addResearchableAssemblylineRecipe(
-                        getItemContainer("Hatch_Energy_UIV").get(1L),
+                        ItemList.Hatch_Energy_UIV.get(1L),
                         192000,
                         128,
                         400000,
                         16,
-                        new Object[] { getItemContainer("Hull_UMV").get(1L),
+                        new Object[] { ItemList.Hull_UMV.get(1L),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt04, Materials.SuperconductorUMV, 2L),
-                                ItemList.Circuit_Chip_QPIC.get(4L), getItemContainer("PikoCircuit").get(2),
-                                ItemList.UHV_Coil.get(16L), ItemList.Reactor_Coolant_Sp_6.get(1L),
+                                ItemList.Circuit_Chip_QPIC.get(4L), ItemList.UHV_Coil.get(16L),
                                 ItemList.Reactor_Coolant_Sp_6.get(1L), ItemList.Reactor_Coolant_Sp_6.get(1L),
                                 ItemList.Reactor_Coolant_Sp_6.get(1L), ItemList.Reactor_Coolant_Sp_6.get(1L),
                                 ItemList.Reactor_Coolant_Sp_6.get(1L), ItemList.Reactor_Coolant_Sp_6.get(1L),
                                 ItemList.Reactor_Coolant_Sp_6.get(1L), ItemList.Reactor_Coolant_Sp_6.get(1L),
-                                ItemList.Electric_Pump_UMV.get(1L) },
+                                ItemList.Reactor_Coolant_Sp_6.get(1L), ItemList.Electric_Pump_UMV.get(1L) },
                         new FluidStack[] { Materials.SuperCoolant.getFluid(32_000L),
                                 new FluidStack(solderUEV, 40 * 144), Materials.UUMatter.getFluid(32000L) },
-                        getItemContainer("Hatch_Energy_UMV").get(1L),
+                        ItemList.Hatch_Energy_UMV.get(1L),
                         1000,
                         128_000_000);
 
                 // Energy Hatch UXV
                 TT_recipeAdder.addResearchableAssemblylineRecipe(
-                        getItemContainer("Hatch_Energy_UMV").get(1L),
+                        ItemList.Hatch_Energy_UMV.get(1L),
                         384000,
                         256,
                         800000,
                         32,
-                        new Object[] { getItemContainer("Hull_UXV").get(1L),
+                        new Object[] { ItemList.Hull_UXV.get(1L),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt08, Materials.SuperconductorUMV, 4L),
-                                ItemList.Circuit_Chip_QPIC.get(16L), getItemContainer("QuantumCircuit").get(2),
-                                ItemList.UHV_Coil.get(32L), ItemList.Reactor_Coolant_Sp_6.get(1L),
+                                ItemList.Circuit_Chip_QPIC.get(16L), ItemList.UHV_Coil.get(32L),
                                 ItemList.Reactor_Coolant_Sp_6.get(1L), ItemList.Reactor_Coolant_Sp_6.get(1L),
                                 ItemList.Reactor_Coolant_Sp_6.get(1L), ItemList.Reactor_Coolant_Sp_6.get(1L),
                                 ItemList.Reactor_Coolant_Sp_6.get(1L), ItemList.Reactor_Coolant_Sp_6.get(1L),
                                 ItemList.Reactor_Coolant_Sp_6.get(1L), ItemList.Reactor_Coolant_Sp_6.get(1L),
-                                ItemList.Reactor_Coolant_Sp_6.get(1L), ItemList.Electric_Pump_UXV.get(1L) },
+                                ItemList.Reactor_Coolant_Sp_6.get(1L), ItemList.Reactor_Coolant_Sp_6.get(1L),
+                                ItemList.Electric_Pump_UXV.get(1L) },
                         new FluidStack[] { Materials.SuperCoolant.getFluid(64_000L),
                                 new FluidStack(solderUEV, 80 * 144), Materials.UUMatter.getFluid(64000L) },
-                        getItemContainer("Hatch_Energy_UXV").get(1L),
+                        ItemList.Hatch_Energy_UXV.get(1L),
                         1000,
                         512_000_000);
             }
@@ -306,7 +304,7 @@ public class ResearchStationAssemblyLine implements Runnable {
                         64,
                         200000,
                         8,
-                        new Object[] { getItemContainer("Hull_UEV").get(1L),
+                        new Object[] { ItemList.Hull_UEV.get(1L),
                                 GT_OreDictUnificator.get(OrePrefixes.spring, Materials.SuperconductorUEVBase, 8L),
                                 ItemList.Circuit_Chip_QPIC.get(4L),
                                 new Object[] { OrePrefixes.circuit.get(Materials.Bio), 2L }, ItemList.UHV_Coil.get(4L),
@@ -314,18 +312,18 @@ public class ResearchStationAssemblyLine implements Runnable {
                                 ItemList.Reactor_Coolant_Sp_6.get(1L), ItemList.Electric_Pump_UEV.get(1L) },
                         new FluidStack[] { new FluidStack(FluidRegistry.getFluid("ic2coolant"), 32000),
                                 new FluidStack(solderUEV, 20 * 144), Materials.UUMatter.getFluid(8000L) },
-                        getItemContainer("Hatch_Dynamo_UEV").get(1L),
+                        ItemList.Hatch_Dynamo_UEV.get(1L),
                         1000,
                         8000000);
 
                 // Dynamo Hatch UIV
                 TT_recipeAdder.addResearchableAssemblylineRecipe(
-                        getItemContainer("Hatch_Dynamo_UEV").get(1L),
+                        ItemList.Hatch_Dynamo_UEV.get(1L),
                         192_000,
                         128,
                         400_000,
                         16,
-                        new Object[] { getItemContainer("Hull_UIV").get(1L),
+                        new Object[] { ItemList.Hull_UIV.get(1L),
                                 GT_OreDictUnificator.get(OrePrefixes.spring, Materials.SuperconductorUIVBase, 8L),
                                 ItemList.Circuit_Chip_QPIC.get(4L),
                                 new Object[] { OrePrefixes.circuit.get(Materials.Optical), 2L },
@@ -335,51 +333,50 @@ public class ResearchStationAssemblyLine implements Runnable {
                                 ItemList.Reactor_Coolant_Sp_6.get(1L), ItemList.Electric_Pump_UIV.get(1L) },
                         new FluidStack[] { Materials.SuperCoolant.getFluid(16_000L),
                                 new FluidStack(solderUEV, 20 * 144), Materials.UUMatter.getFluid(16_000L) },
-                        getItemContainer("Hatch_Dynamo_UIV").get(1L),
+                        ItemList.Hatch_Dynamo_UIV.get(1L),
                         1000,
                         32_000_000);
 
                 // Dynamo Hatch UMV
                 TT_recipeAdder.addResearchableAssemblylineRecipe(
-                        getItemContainer("Hatch_Dynamo_UIV").get(1L),
+                        ItemList.Hatch_Dynamo_UIV.get(1L),
                         384000,
                         256,
                         800000,
                         32,
-                        new Object[] { getItemContainer("Hull_UMV").get(1L),
+                        new Object[] { ItemList.Hull_UMV.get(1L),
                                 GT_OreDictUnificator.get(OrePrefixes.spring, Materials.SuperconductorUMVBase, 8L),
-                                ItemList.Circuit_Chip_QPIC.get(4L), getItemContainer("PikoCircuit").get(2),
-                                ItemList.UHV_Coil.get(16L), ItemList.Reactor_Coolant_Sp_6.get(1L),
+                                ItemList.Circuit_Chip_QPIC.get(4L), ItemList.UHV_Coil.get(16L),
                                 ItemList.Reactor_Coolant_Sp_6.get(1L), ItemList.Reactor_Coolant_Sp_6.get(1L),
                                 ItemList.Reactor_Coolant_Sp_6.get(1L), ItemList.Reactor_Coolant_Sp_6.get(1L),
                                 ItemList.Reactor_Coolant_Sp_6.get(1L), ItemList.Reactor_Coolant_Sp_6.get(1L),
                                 ItemList.Reactor_Coolant_Sp_6.get(1L), ItemList.Reactor_Coolant_Sp_6.get(1L),
-                                ItemList.Electric_Pump_UMV.get(1L) },
+                                ItemList.Reactor_Coolant_Sp_6.get(1L), ItemList.Electric_Pump_UMV.get(1L) },
                         new FluidStack[] { Materials.SuperCoolant.getFluid(32_000L),
                                 new FluidStack(solderUEV, 40 * 144), Materials.UUMatter.getFluid(32000L) },
-                        getItemContainer("Hatch_Dynamo_UMV").get(1L),
+                        ItemList.Hatch_Dynamo_UMV.get(1L),
                         1000,
                         128_000_000);
 
                 // Dynamo Hatch UXV
                 TT_recipeAdder.addResearchableAssemblylineRecipe(
-                        getItemContainer("Hatch_Dynamo_UMV").get(1L),
+                        ItemList.Hatch_Dynamo_UMV.get(1L),
                         384000,
                         256,
                         800000,
                         32,
-                        new Object[] { getItemContainer("Hull_UXV").get(1L),
+                        new Object[] { ItemList.Hull_UXV.get(1L),
                                 GT_OreDictUnificator.get(OrePrefixes.spring, Materials.SuperconductorUMVBase, 16L),
-                                ItemList.Circuit_Chip_QPIC.get(16L), getItemContainer("QuantumCircuit").get(2),
-                                ItemList.UHV_Coil.get(32L), ItemList.Reactor_Coolant_Sp_6.get(1L),
+                                ItemList.Circuit_Chip_QPIC.get(16L), ItemList.UHV_Coil.get(32L),
                                 ItemList.Reactor_Coolant_Sp_6.get(1L), ItemList.Reactor_Coolant_Sp_6.get(1L),
                                 ItemList.Reactor_Coolant_Sp_6.get(1L), ItemList.Reactor_Coolant_Sp_6.get(1L),
                                 ItemList.Reactor_Coolant_Sp_6.get(1L), ItemList.Reactor_Coolant_Sp_6.get(1L),
                                 ItemList.Reactor_Coolant_Sp_6.get(1L), ItemList.Reactor_Coolant_Sp_6.get(1L),
-                                ItemList.Reactor_Coolant_Sp_6.get(1L), ItemList.Electric_Pump_UXV.get(1L) },
+                                ItemList.Reactor_Coolant_Sp_6.get(1L), ItemList.Reactor_Coolant_Sp_6.get(1L),
+                                ItemList.Electric_Pump_UXV.get(1L) },
                         new FluidStack[] { Materials.SuperCoolant.getFluid(64_000L),
                                 new FluidStack(solderUEV, 80 * 144), Materials.UUMatter.getFluid(64000L) },
-                        getItemContainer("Hatch_Dynamo_UXV").get(1L),
+                        ItemList.Hatch_Dynamo_UXV.get(1L),
                         1000,
                         512_000_000);
             }
@@ -549,48 +546,6 @@ public class ResearchStationAssemblyLine implements Runnable {
                 300 * 20,
                 8_000_000);
 
-        // Piko Circuit
-        TT_recipeAdder.addResearchableAssemblylineRecipe(
-                ItemList.Circuit_OpticalMainframe.get(1L),
-                384000,
-                1024,
-                4000000,
-                64,
-                new Object[] { ItemList.Circuit_Board_Optical.get(1L), getItemContainer("PicoWafer").get(4L),
-                        new Object[] { OrePrefixes.circuit.get(Materials.Optical), 2L },
-                        ItemList.Circuit_Parts_TransistorXSMD.get(48L), ItemList.Circuit_Parts_ResistorXSMD.get(48L),
-                        ItemList.Circuit_Parts_CapacitorXSMD.get(48L), ItemList.Circuit_Parts_DiodeXSMD.get(48L),
-                        ItemList.Circuit_Chip_PPIC.get(64L), GT_OreDictUnificator.get("foilRadoxPoly", 16L),
-                        GT_OreDictUnificator.get(OrePrefixes.bolt, MaterialsUEVplus.TranscendentMetal, 32),
-                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Neutronium, 16),
-                        GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Lanthanum, 64) },
-                new FluidStack[] { new FluidStack(solderUEV, 3744), Materials.UUMatter.getFluid(8000L),
-                        Materials.Osmium.getMolten(1152L) },
-                getItemContainer("PikoCircuit").get(1L),
-                10000,
-                128_000_000);
-
-        // Quantum Circuit
-        TT_recipeAdder.addResearchableAssemblylineRecipe(
-                getItemContainer("PikoCircuit").get(1L),
-                720000,
-                2048,
-                8000000,
-                128,
-                new ItemStack[] { GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Neutronium, 16),
-                        getItemContainer("PikoCircuit").get(2L), ItemList.Circuit_Parts_CapacitorXSMD.get(64L),
-                        ItemList.Circuit_Parts_DiodeXSMD.get(64L), ItemList.Circuit_Parts_TransistorXSMD.get(64L),
-                        ItemList.Circuit_Parts_ResistorXSMD.get(64L), ItemList.Circuit_Chip_QPIC.get(64L),
-                        GT_OreDictUnificator.get("foilShirabon", 64),
-                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Indium, 64),
-                        GT_OreDictUnificator.get(OrePrefixes.wireGt01, MaterialsUEVplus.SpaceTime, 8),
-                        GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Lanthanum, 16) },
-                new FluidStack[] { new FluidStack(solderUEV, 3744), Materials.UUMatter.getFluid(24000L),
-                        Materials.Osmium.getMolten(2304L) },
-                getItemContainer("QuantumCircuit").get(1L),
-                20000,
-                (int) TierEU.RECIPE_UMV);
-
         // Transcendent Plasma Mixer - TPM.
         TT_recipeAdder.addResearchableAssemblylineRecipe(
                 CustomItemList.eM_energyTunnel7_UV.get(1),
@@ -618,119 +573,6 @@ public class ResearchStationAssemblyLine implements Runnable {
                 5 * MINUTES,
                 (int) TierEU.RECIPE_UIV);
 
-        // Stargate Recipes
-        if (EternalSingularity.isModLoaded() && SGCraft.isModLoaded()) {
-
-            final int baseStargateTime = 125_000 * 20;
-
-            // Stargate shield foil
-            TT_recipeAdder.addResearchableAssemblylineRecipe(
-                    GT_OreDictUnificator
-                            .get(OrePrefixes.plate, MaterialsUEVplus.MagnetohydrodynamicallyConstrainedStarMatter, 1L),
-                    (int) TierEU.RECIPE_MAX,
-                    32768,
-                    (int) TierEU.RECIPE_UXV,
-                    64,
-                    new ItemStack[] { ItemList.Casing_Dim_Bridge.get(64),
-                            CustomItemList.StabilisationFieldGeneratorTier8.get(64),
-                            GT_OreDictUnificator.get("blockShirabon", 64L),
-                            GT_OreDictUnificator.get("blockShirabon", 64L),
-                            GT_OreDictUnificator.get(OrePrefixes.block, MaterialsUEVplus.SpaceTime, 64L),
-                            GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Quantum, 16L),
-                            GT_OreDictUnificator.get(OrePrefixes.plateDense, MaterialsUEVplus.SpaceTime, 8L),
-                            GT_OreDictUnificator.get(OrePrefixes.plateDense, MaterialsUEVplus.Universium, 8L),
-                            GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Infinity, 8L),
-                            GT_OreDictUnificator.get("plateDenseShirabon", 8L), ItemList.Sensor_UXV.get(16L),
-                            ItemList.Emitter_UXV.get(16L),
-                            getModItem(EternalSingularity.ID, "eternal_singularity", 16L),
-                            MaterialsUEVplus.Universium.getNanite(16), MaterialsUEVplus.BlackDwarfMatter.getNanite(16),
-                            MaterialsUEVplus.WhiteDwarfMatter.getNanite(16) },
-                    new FluidStack[] { Materials.Neutronium.getMolten(32_768_000L),
-                            MaterialsUEVplus.SpaceTime.getMolten(4 * 36864L),
-                            Materials.SuperconductorUMVBase.getMolten(4 * 36864L),
-                            MaterialsUEVplus.ExcitedDTEC.getFluid(4 * 36864L) },
-                    getItemContainer("StargateShieldingFoil").get(1L),
-                    baseStargateTime,
-                    (int) TierEU.RECIPE_UMV);
-
-            // Stargate chevron
-            TT_recipeAdder.addResearchableAssemblylineRecipe(
-                    getItemContainer("StargateShieldingFoil").get(1L),
-                    (int) TierEU.RECIPE_MAX,
-                    32_768,
-                    (int) TierEU.RECIPE_UXV,
-                    64,
-                    new ItemStack[] {
-                            GT_OreDictUnificator.get(OrePrefixes.block, MaterialsUEVplus.TranscendentMetal, 64L),
-                            GT_OreDictUnificator.get("blockShirabon", 64),
-                            CustomItemList.EOH_Reinforced_Spatial_Casing.get(64),
-                            CustomItemList.EOH_Reinforced_Spatial_Casing.get(64),
-
-                            GT_OreDictUnificator.get(OrePrefixes.frameGt, MaterialsUEVplus.SpaceTime, 16L),
-                            GT_OreDictUnificator.get(
-                                    OrePrefixes.frameGt,
-                                    MaterialsUEVplus.MagnetohydrodynamicallyConstrainedStarMatter,
-                                    16L),
-                            GT_OreDictUnificator.get(OrePrefixes.gemExquisite, Materials.Ruby, 16L),
-                            GT_OreDictUnificator.get(OrePrefixes.gemExquisite, Materials.Jasper, 16L),
-
-                            GT_OreDictUnificator.get(OrePrefixes.gemExquisite, Materials.Opal, 16L),
-                            GT_OreDictUnificator.get(OrePrefixes.gemExquisite, Materials.Sapphire, 16L),
-                            GT_OreDictUnificator.get(
-                                    OrePrefixes.plateDense,
-                                    MaterialsUEVplus.MagnetohydrodynamicallyConstrainedStarMatter,
-                                    8L),
-                            GT_OreDictUnificator.get("plateDenseShirabon", 8),
-
-                            ItemList.Electric_Motor_UXV.get(64L), ItemList.Electric_Piston_UXV.get(64L),
-                            ItemList.Field_Generator_UXV.get(16L),
-                            getItemContainer("QuantumCircuit").get(1L).splitStack(32) },
-                    new FluidStack[] { Materials.Neutronium.getMolten(32_768_000L),
-                            MaterialsUEVplus.SpaceTime.getMolten(4 * 36864L),
-                            MaterialsUEVplus.MagnetohydrodynamicallyConstrainedStarMatter.getMolten(36864L),
-                            MaterialsUEVplus.ExcitedDTEC.getFluid(4 * 36864L) },
-                    getItemContainer("StargateChevron").get(1L),
-                    baseStargateTime,
-                    (int) TierEU.RECIPE_UMV);
-
-            // Stargate Frame Part
-            TT_recipeAdder.addResearchableAssemblylineRecipe(
-                    GT_OreDictUnificator.get(OrePrefixes.frameGt, MaterialsUEVplus.SpaceTime, 1L),
-                    (int) TierEU.RECIPE_MAX,
-                    32_768,
-                    500_000_000,
-                    64,
-                    new ItemStack[] { GT_OreDictUnificator.get(OrePrefixes.stickLong, Materials.Infinity, 64L),
-                            GT_OreDictUnificator.get(OrePrefixes.stickLong, MaterialsUEVplus.SpaceTime, 64L),
-                            GT_OreDictUnificator.get(
-                                    OrePrefixes.stickLong,
-                                    MaterialsUEVplus.MagnetohydrodynamicallyConstrainedStarMatter,
-                                    64L),
-                            GT_OreDictUnificator.get(OrePrefixes.stickLong, Materials.Neutronium, 64L),
-
-                            GT_OreDictUnificator.get(OrePrefixes.stickLong, Materials.Osmiridium, 64L),
-                            GT_OreDictUnificator.get("stickLongShirabon", 64),
-                            getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 64L, 39),
-                            getModItem(GTPlusPlus.ID, "itemRodLongQuantum", 64L),
-
-                            getModItem(GTPlusPlus.ID, "itemRodLongHypogen", 64L),
-                            getModItem(GTPlusPlus.ID, "itemRodLongCelestialTungsten", 64L),
-                            getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 64L, 10106),
-                            getModItem(GTPlusPlus.ID, "itemRodLongAstralTitanium", 64L),
-
-                            GT_OreDictUnificator.get(OrePrefixes.stickLong, Materials.SuperconductorUMVBase, 64L),
-                            GT_OreDictUnificator.get(OrePrefixes.stickLong, MaterialsUEVplus.Universium, 64L),
-                            getModItem(GTPlusPlus.ID, "itemRodLongAbyssalAlloy", 64L),
-                            GT_OreDictUnificator.get(OrePrefixes.stickLong, MaterialsUEVplus.TranscendentMetal, 64L), },
-                    new FluidStack[] { Materials.Neutronium.getMolten(32_768_000L),
-                            MaterialsUEVplus.SpaceTime.getMolten(4 * 36864L),
-                            MaterialsUEVplus.Universium.getMolten(4 * 36864L),
-                            MaterialsUEVplus.ExcitedDTEC.getFluid(4 * 36864L) },
-                    getItemContainer("StargateFramePart").get(1L),
-                    baseStargateTime,
-                    (int) TierEU.RECIPE_UMV);
-        }
-
         // Dimensionally Transcendent Plasma Forge (DTPF)
         if (EternalSingularity.isModLoaded()) {
 
@@ -742,8 +584,7 @@ public class ResearchStationAssemblyLine implements Runnable {
                     32_000_000,
                     1,
                     new Object[] { ItemList.Casing_Dim_Bridge.get(4),
-                            getModItem(GregTech.ID, "gt.blockmachines", 16L, 12730),
-                            getItemContainer("Hatch_Energy_UEV").get(4L),
+                            getModItem(GregTech.ID, "gt.blockmachines", 16L, 12730), ItemList.Hatch_Energy_UEV.get(4L),
                             GT_OreDictUnificator.get(OrePrefixes.wireGt16, Materials.SuperconductorUEV, 6),
                             ItemList.Reactor_Coolant_Sp_6.get(1L), ItemList.Reactor_Coolant_Sp_6.get(1L),
                             ItemList.Reactor_Coolant_Sp_6.get(1L), ItemList.Reactor_Coolant_Sp_6.get(1L),
@@ -1045,7 +886,7 @@ public class ResearchStationAssemblyLine implements Runnable {
                             new Object[] { OrePrefixes.circuit.get(Materials.Optical), 1L },
                             new Object[] { OrePrefixes.circuit.get(Materials.Optical), 1L },
                             GT_OreDictUnificator.get("plateDenseMetastableOganesson", 4),
-                            ItemList.Field_Generator_UEV.get(2), getItemContainer("PicoWafer").get(64L),
+                            ItemList.Field_Generator_UEV.get(2),
                             GT_OreDictUnificator.get(OrePrefixes.wireGt04, Materials.SuperconductorUEV, 32) },
                     new FluidStack[] { ELEMENT.getInstance().CURIUM.getFluidStack(9216),
                             ELEMENT.STANDALONE.CHRONOMATIC_GLASS.getFluidStack(9216), ALLOY.ABYSSAL.getFluidStack(9216),
@@ -2542,7 +2383,7 @@ public class ResearchStationAssemblyLine implements Runnable {
                                 getModItem(AvaritiaAddons.ID, "InfinityChest", absoluteTier + 1),
                                 // Cosmic fabric manipulator
                                 getModItem(GTPlusPlus.ID, "gtplusplus.blockcasings.5", tier, 8), ME_Singularity,
-                                plateList[absoluteTier], getItemContainer("QuantumCircuit").get(set) },
+                                plateList[absoluteTier] },
                         new FluidStack[] { new FluidStack(solderUEV, (int) (2_880 * pow(2L, absoluteTier))),
                                 MaterialsUEVplus.Space.getMolten(1_440 * (absoluteTier + 1)),
                                 specialFluid[absoluteTier] },
@@ -2567,7 +2408,7 @@ public class ResearchStationAssemblyLine implements Runnable {
                                 getModItem(AvaritiaAddons.ID, "InfinityChest", absoluteTier + 1),
                                 // Cosmic fabric manipulator
                                 getModItem(GTPlusPlus.ID, "gtplusplus.blockcasings.5", tier, 8), ME_Singularity,
-                                ME_Singularity, plateList[absoluteTier], getItemContainer("QuantumCircuit").get(set) },
+                                ME_Singularity, plateList[absoluteTier] },
                         new FluidStack[] { new FluidStack(solderUEV, (int) (2_880 * pow(2L, absoluteTier))),
                                 MaterialsUEVplus.Space.getMolten(1_440 * (absoluteTier + 1)),
                                 specialFluid[absoluteTier] },
@@ -2592,8 +2433,7 @@ public class ResearchStationAssemblyLine implements Runnable {
                                 getModItem(AvaritiaAddons.ID, "InfinityChest", absoluteTier + 1),
                                 // Cosmic fabric manipulator
                                 getModItem(GTPlusPlus.ID, "gtplusplus.blockcasings.5", tier, 8), ME_Singularity,
-                                ME_Singularity, ME_Singularity, plateList[absoluteTier],
-                                getItemContainer("QuantumCircuit").get(set) },
+                                ME_Singularity, ME_Singularity, plateList[absoluteTier] },
                         new FluidStack[] { new FluidStack(solderUEV, (int) (2_880 * pow(2L, absoluteTier))),
                                 MaterialsUEVplus.Space.getMolten(1_440 * (absoluteTier + 1)),
                                 specialFluid[absoluteTier], },
@@ -2621,8 +2461,7 @@ public class ResearchStationAssemblyLine implements Runnable {
                                 getModItem(AvaritiaAddons.ID, "InfinityChest", absoluteTier + 1),
                                 // Infinity infused manipulator
                                 getModItem(GTPlusPlus.ID, "gtplusplus.blockcasings.5", tier, 9), ME_Singularity,
-                                ME_Singularity, ME_Singularity, ME_Singularity, plateList[absoluteTier],
-                                getItemContainer("QuantumCircuit").get(set) },
+                                ME_Singularity, ME_Singularity, ME_Singularity, plateList[absoluteTier] },
                         new FluidStack[] { new FluidStack(solderUEV, (int) (2_880 * pow(2L, absoluteTier))),
                                 MaterialsUEVplus.Space.getMolten(1_440 * (absoluteTier + 1)),
                                 specialFluid[absoluteTier], },
@@ -2647,8 +2486,8 @@ public class ResearchStationAssemblyLine implements Runnable {
                                 getModItem(AvaritiaAddons.ID, "InfinityChest", absoluteTier + 1),
                                 // Infinity infused manipulator
                                 getModItem(GTPlusPlus.ID, "gtplusplus.blockcasings.5", tier, 9), ME_Singularity,
-                                ME_Singularity, ME_Singularity, ME_Singularity, ME_Singularity, plateList[absoluteTier],
-                                getItemContainer("QuantumCircuit").get(set) },
+                                ME_Singularity, ME_Singularity, ME_Singularity, ME_Singularity,
+                                plateList[absoluteTier] },
                         new FluidStack[] { new FluidStack(solderUEV, (int) (2_880 * pow(2L, absoluteTier))),
                                 MaterialsUEVplus.Space.getMolten(1_440 * (absoluteTier + 1)),
                                 specialFluid[absoluteTier], },
@@ -2674,7 +2513,7 @@ public class ResearchStationAssemblyLine implements Runnable {
                                 // Infinity infused manipulator
                                 getModItem(GTPlusPlus.ID, "gtplusplus.blockcasings.5", tier, 9), ME_Singularity,
                                 ME_Singularity, ME_Singularity, ME_Singularity, ME_Singularity, ME_Singularity,
-                                plateList[absoluteTier], getItemContainer("QuantumCircuit").get(set) },
+                                plateList[absoluteTier] },
                         new FluidStack[] { new FluidStack(solderUEV, (int) (2_880 * pow(2L, absoluteTier))),
                                 MaterialsUEVplus.Space.getMolten(1_440 * (absoluteTier + 1)),
                                 specialFluid[absoluteTier], },
@@ -2703,7 +2542,7 @@ public class ResearchStationAssemblyLine implements Runnable {
                                 // Spacetime continuum ripper
                                 getModItem(GTPlusPlus.ID, "gtplusplus.blockcasings.5", tier, 10), ME_Singularity,
                                 ME_Singularity, ME_Singularity, ME_Singularity, ME_Singularity, ME_Singularity,
-                                ME_Singularity, plateList[absoluteTier], getItemContainer("QuantumCircuit").get(set) },
+                                ME_Singularity, plateList[absoluteTier] },
                         new FluidStack[] { new FluidStack(solderUEV, (int) (2_880 * pow(2L, absoluteTier))),
                                 MaterialsUEVplus.Space.getMolten(1_440 * (absoluteTier + 1)),
                                 specialFluid[absoluteTier], },
@@ -2729,8 +2568,7 @@ public class ResearchStationAssemblyLine implements Runnable {
                                 // Spacetime continuum ripper
                                 getModItem(GTPlusPlus.ID, "gtplusplus.blockcasings.5", tier, 10), ME_Singularity,
                                 ME_Singularity, ME_Singularity, ME_Singularity, ME_Singularity, ME_Singularity,
-                                ME_Singularity, ME_Singularity, plateList[absoluteTier],
-                                getItemContainer("QuantumCircuit").get(set) },
+                                ME_Singularity, ME_Singularity, plateList[absoluteTier] },
                         new FluidStack[] { new FluidStack(solderUEV, (int) (2_880 * pow(2L, absoluteTier))),
                                 MaterialsUEVplus.Space.getMolten(1_440 * (absoluteTier + 1)),
                                 specialFluid[absoluteTier], },
@@ -2756,8 +2594,7 @@ public class ResearchStationAssemblyLine implements Runnable {
                                 // Spacetime continuum ripper
                                 getModItem(GTPlusPlus.ID, "gtplusplus.blockcasings.5", tier, 10), ME_Singularity,
                                 ME_Singularity, ME_Singularity, ME_Singularity, ME_Singularity, ME_Singularity,
-                                ME_Singularity, ME_Singularity, ME_Singularity, plateList[absoluteTier],
-                                getItemContainer("QuantumCircuit").get(set) },
+                                ME_Singularity, ME_Singularity, ME_Singularity, plateList[absoluteTier] },
                         new FluidStack[] { new FluidStack(solderUEV, (int) (2_880 * pow(2L, absoluteTier))),
                                 MaterialsUEVplus.Space.getMolten(1_440 * (absoluteTier + 1)),
                                 specialFluid[absoluteTier], },
@@ -2825,7 +2662,6 @@ public class ResearchStationAssemblyLine implements Runnable {
                                 // UV Solar panel
                                 getModItem(SuperSolarPanels.ID, "PhotonicSolarPanel", absoluteTier + 1, 0),
 
-                                getItemContainer("QuantumCircuit").get(absoluteTier + 1),
                                 // Red Spectral Component
                                 getModItem(SuperSolarPanels.ID, "redcomponent", 64),
                                 // Green Spectral Component
@@ -2931,7 +2767,6 @@ public class ResearchStationAssemblyLine implements Runnable {
                                 getModItem(GraviSuite.ID, "itemSimpleItem", 64, 3),
 
                                 plateList[absoluteTier],
-                                getItemContainer("QuantumCircuit").get(2 * (absoluteTier + 1)),
                                 GT_OreDictUnificator.get(OrePrefixes.gearGt, MaterialsUEVplus.SpaceTime, absoluteTier + 1),
                                 GT_OreDictUnificator.get(OrePrefixes.gearGtSmall, MaterialsUEVplus.SpaceTime, absoluteTier + 1)
 
@@ -3041,9 +2876,9 @@ public class ResearchStationAssemblyLine implements Runnable {
         ItemStack[] energyHatches = { ItemList.Hatch_Energy_ULV.get(1), ItemList.Hatch_Energy_LV.get(1),
                 ItemList.Hatch_Energy_MV.get(1), ItemList.Hatch_Energy_HV.get(1), ItemList.Hatch_Energy_EV.get(1),
                 ItemList.Hatch_Energy_IV.get(1), ItemList.Hatch_Energy_LuV.get(1), ItemList.Hatch_Energy_ZPM.get(1),
-                ItemList.Hatch_Energy_UV.get(1), ItemList.Hatch_Energy_MAX.get(1),
-                getItemContainer("Hatch_Energy_UEV").get(1L), getItemContainer("Hatch_Energy_UIV").get(1L),
-                getItemContainer("Hatch_Energy_UMV").get(1L), getItemContainer("Hatch_Energy_UXV").get(1L) };
+                ItemList.Hatch_Energy_UV.get(1), ItemList.Hatch_Energy_MAX.get(1), ItemList.Hatch_Energy_UEV.get(1L),
+                ItemList.Hatch_Energy_UIV.get(1L), ItemList.Hatch_Energy_UMV.get(1L),
+                ItemList.Hatch_Energy_UXV.get(1L) };
 
         ItemStack[] energyHatches_4A = { CustomItemList.eM_energyMulti4_EV.get(1),
                 CustomItemList.eM_energyMulti4_IV.get(1), CustomItemList.eM_energyMulti4_LuV.get(1),
@@ -3074,9 +2909,9 @@ public class ResearchStationAssemblyLine implements Runnable {
         ItemStack[] dynamoHatches = { ItemList.Hatch_Dynamo_ULV.get(1), ItemList.Hatch_Dynamo_LV.get(1),
                 ItemList.Hatch_Dynamo_MV.get(1), ItemList.Hatch_Dynamo_HV.get(1), ItemList.Hatch_Dynamo_EV.get(1),
                 ItemList.Hatch_Dynamo_IV.get(1), ItemList.Hatch_Dynamo_LuV.get(1), ItemList.Hatch_Dynamo_ZPM.get(1),
-                ItemList.Hatch_Dynamo_UV.get(1), ItemList.Hatch_Dynamo_MAX.get(1),
-                getItemContainer("Hatch_Dynamo_UEV").get(1L), getItemContainer("Hatch_Dynamo_UIV").get(1L),
-                getItemContainer("Hatch_Dynamo_UMV").get(1L), getItemContainer("Hatch_Dynamo_UXV").get(1L) };
+                ItemList.Hatch_Dynamo_UV.get(1), ItemList.Hatch_Dynamo_MAX.get(1), ItemList.Hatch_Dynamo_UEV.get(1L),
+                ItemList.Hatch_Dynamo_UIV.get(1L), ItemList.Hatch_Dynamo_UMV.get(1L),
+                ItemList.Hatch_Dynamo_UXV.get(1L) };
 
         Object[] circuitsTierPlusTwo = { new Object[] { OrePrefixes.circuit.get(Materials.Good), 1L }, // MV
                 new Object[] { OrePrefixes.circuit.get(Materials.Advanced), 1L }, // HV
