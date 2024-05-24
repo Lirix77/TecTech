@@ -8,9 +8,10 @@ import net.minecraftforge.common.MinecraftForge;
 import com.github.technus.tectech.loader.MainLoader;
 import com.github.technus.tectech.loader.TecTechConfig;
 import com.github.technus.tectech.loader.gui.CreativeTabTecTech;
+import com.github.technus.tectech.loader.thing.MuTeLoader;
 import com.github.technus.tectech.mechanics.enderStorage.EnderWorldSavedData;
-import com.github.technus.tectech.nei.IMCForNEI;
 import com.github.technus.tectech.proxy.CommonProxy;
+import com.github.technus.tectech.recipe.TecTechRecipeMaps;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
@@ -83,7 +84,9 @@ public class TecTech {
         FMLCommonHandler.instance().bus().register(enderWorldSavedData);
         MinecraftForge.EVENT_BUS.register(enderWorldSavedData);
 
+        TecTechRecipeMaps.init();
         MainLoader.preLoad();
+        new MuTeLoader().run();
     }
 
     @Mod.EventHandler
@@ -93,7 +96,6 @@ public class TecTech {
 
         MainLoader.load();
         MainLoader.addAfterGregTechPostLoadRunner();
-        IMCForNEI.IMCSender();
     }
 
     @Mod.EventHandler

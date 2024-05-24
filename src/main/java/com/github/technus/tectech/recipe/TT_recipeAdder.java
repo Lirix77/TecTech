@@ -14,6 +14,7 @@ import com.github.technus.tectech.thing.CustomItemList;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import gregtech.api.enums.ItemList;
+import gregtech.api.recipe.RecipeMaps;
 import gregtech.api.util.GT_OreDictUnificator;
 import gregtech.api.util.GT_Recipe;
 import gregtech.api.util.GT_Recipe.GT_Recipe_AssemblyLine;
@@ -48,7 +49,7 @@ public class TT_recipeAdder extends GT_RecipeAdder {
         }
         researchAmperage = GT_Utility.clamp(researchAmperage, 1, Short.MAX_VALUE);
         computationRequiredPerSec = GT_Utility.clamp(computationRequiredPerSec, 1, Short.MAX_VALUE);
-        TT_recipe.GT_Recipe_MapTT.sResearchableFakeRecipes.addFakeRecipe(
+        TecTechRecipeMaps.researchStationFakeRecipes.addFakeRecipe(
                 false,
                 new ItemStack[] { aResearchItem },
                 new ItemStack[] { aOutput },
@@ -58,7 +59,7 @@ public class TT_recipeAdder extends GT_RecipeAdder {
                 totalComputationRequired,
                 researchEUt,
                 researchAmperage | computationRequiredPerSec << 16);
-        GT_Recipe.GT_Recipe_Map.sAssemblylineVisualRecipes.addFakeRecipe(
+        RecipeMaps.assemblylineVisualRecipes.addFakeRecipe(
                 false,
                 aInputs,
                 new ItemStack[] { aOutput },
@@ -78,7 +79,7 @@ public class TT_recipeAdder extends GT_RecipeAdder {
                         aOutput,
                         assDuration,
                         assEUt));
-        TT_recipe.GT_Recipe_MapTT.sAssemblylineRecipes.add(
+        TecTechRecipeMaps.researchableALRecipeList.add(
                 new GT_Recipe.GT_Recipe_AssemblyLine(
                         aResearchItem,
                         totalComputationRequired / computationRequiredPerSec,
@@ -179,7 +180,7 @@ public class TT_recipeAdder extends GT_RecipeAdder {
         tPersistentHash = tPersistentHash * 31 + researchEUt;
         tPersistentHash = tPersistentHash * 31 + assDuration;
         tPersistentHash = tPersistentHash * 31 + assEUt;
-        TT_recipe.GT_Recipe_MapTT.sResearchableFakeRecipes.addFakeRecipe(
+        TecTechRecipeMaps.researchStationFakeRecipes.addFakeRecipe(
                 false,
                 new ItemStack[] { aResearchItem },
                 new ItemStack[] { aOutput },
@@ -189,7 +190,7 @@ public class TT_recipeAdder extends GT_RecipeAdder {
                 totalComputationRequired,
                 researchEUt,
                 researchAmperage | computationRequiredPerSec << 16);
-        GT_Recipe.GT_Recipe_Map.sAssemblylineVisualRecipes.addFakeRecipe(
+        RecipeMaps.assemblylineVisualRecipes.addFakeRecipe(
                 false,
                 tInputs,
                 new ItemStack[] { aOutput },
@@ -222,8 +223,63 @@ public class TT_recipeAdder extends GT_RecipeAdder {
                 assEUt,
                 tAlts);
         recipeTT.setPersistentHash(tPersistentHash);
-        TT_recipe.GT_Recipe_MapTT.sAssemblylineRecipes.add(recipeTT);
+        TecTechRecipeMaps.researchableALRecipeList.add(recipeTT);
         return true;
     }
 
+    public static boolean addFOGPlasmaRecipe(ItemStack[] itemInputs, FluidStack[] fluidOutputs, int machineDuration,
+            int machineEUt, boolean multiStep, int recipeTier) {
+        if (itemInputs == null) {
+            itemInputs = nullItem;
+        }
+
+        TecTechRecipeMaps.godforgePlasmaRecipes.addRecipe(
+                false,
+                itemInputs,
+                null,
+                multiStep,
+                null,
+                fluidOutputs,
+                machineDuration,
+                machineEUt,
+                recipeTier);
+        return true;
+    }
+
+    public static boolean addFOGPlasmaRecipe(FluidStack[] fluidInputs, FluidStack[] fluidOutputs, int machineDuration,
+            int machineEUt, boolean multiStep, int recipeTier) {
+
+        if (fluidInputs == null) {
+            fluidInputs = nullFluid;
+        }
+
+        TecTechRecipeMaps.godforgePlasmaRecipes.addRecipe(
+                false,
+                null,
+                null,
+                multiStep,
+                fluidInputs,
+                fluidOutputs,
+                machineDuration,
+                machineEUt,
+                recipeTier);
+        return true;
+    }
+
+    public static boolean addFOGExoticFakeRecipe(ItemStack[] itemInputs, FluidStack[] fluidInputs,
+            FluidStack[] fluidOutputs, int machineDuration, int machineEUt, int recipeTier) {
+
+        TecTechRecipeMaps.godforgeExoticMatterRecipes.addFakeRecipe(
+                false,
+                itemInputs,
+                null,
+                null,
+                fluidInputs,
+                fluidOutputs,
+                machineDuration,
+                machineEUt,
+                recipeTier,
+                false);
+        return true;
+    }
 }
