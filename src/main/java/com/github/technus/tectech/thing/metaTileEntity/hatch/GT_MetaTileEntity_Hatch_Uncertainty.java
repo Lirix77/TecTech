@@ -2,7 +2,13 @@ package com.github.technus.tectech.thing.metaTileEntity.hatch;
 
 import static net.minecraft.util.StatCollector.translateToLocal;
 import static net.minecraft.util.StatCollector.translateToLocalFormatted;
-import static org.lwjgl.opengl.GL11.*;
+import static org.lwjgl.opengl.GL11.GL_BLEND;
+import static org.lwjgl.opengl.GL11.GL_ONE_MINUS_SRC_ALPHA;
+import static org.lwjgl.opengl.GL11.GL_SRC_ALPHA;
+import static org.lwjgl.opengl.GL11.glBlendFunc;
+import static org.lwjgl.opengl.GL11.glColor4f;
+import static org.lwjgl.opengl.GL11.glDisable;
+import static org.lwjgl.opengl.GL11.glEnable;
 
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;
@@ -386,7 +392,7 @@ public class GT_MetaTileEntity_Hatch_Uncertainty extends GT_MetaTileEntity_Hatch
                 .widget(new FakeSyncWidget.ByteSyncer(() -> status, val -> status = val));
 
         builder.widget(
-                TextWidget.dynamicString(() -> "Status: " + (status == 0 ? "OK" : "NG")).setSynced(false)
+                new TextWidget().setStringSupplier(() -> "Status: " + (status == 0 ? "OK" : "NG"))
                         .setDefaultColor(COLOR_TEXT_WHITE.get()).setPos(46, 7));
 
         for (int i = 0; i < 9; i++) {

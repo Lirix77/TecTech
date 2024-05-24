@@ -1,9 +1,31 @@
 package com.github.technus.tectech.loader.recipe;
 
 import static com.google.common.math.LongMath.pow;
-import static gregtech.api.enums.Mods.*;
+import static gregtech.api.enums.Mods.Avaritia;
+import static gregtech.api.enums.Mods.AvaritiaAddons;
+import static gregtech.api.enums.Mods.BartWorks;
+import static gregtech.api.enums.Mods.BloodMagic;
+import static gregtech.api.enums.Mods.DraconicEvolution;
+import static gregtech.api.enums.Mods.EternalSingularity;
+import static gregtech.api.enums.Mods.ExtraUtilities;
+import static gregtech.api.enums.Mods.GTNHIntergalactic;
+import static gregtech.api.enums.Mods.GTPlusPlus;
+import static gregtech.api.enums.Mods.GTPlusPlusEverglades;
+import static gregtech.api.enums.Mods.GalaxySpace;
+import static gregtech.api.enums.Mods.GoodGenerator;
+import static gregtech.api.enums.Mods.GraviSuite;
+import static gregtech.api.enums.Mods.GregTech;
+import static gregtech.api.enums.Mods.IndustrialCraft2;
+import static gregtech.api.enums.Mods.KekzTech;
+import static gregtech.api.enums.Mods.KubaTech;
+import static gregtech.api.enums.Mods.NewHorizonsCoreMod;
+import static gregtech.api.enums.Mods.SuperSolarPanels;
+import static gregtech.api.enums.Mods.Thaumcraft;
+import static gregtech.api.enums.Mods.TinkersGregworks;
 import static gregtech.api.util.GT_ModHandler.getModItem;
+import static gregtech.api.util.GT_RecipeBuilder.INGOTS;
 import static gregtech.api.util.GT_RecipeBuilder.MINUTES;
+import static gregtech.api.util.GT_RecipeBuilder.SECONDS;
 
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.Fluid;
@@ -1041,6 +1063,27 @@ public class ResearchStationAssemblyLine implements Runnable {
                 6000,
                 500000);
 
+        if (GTPlusPlus.isModLoaded()) {
+            // Debug uncertainty resolver
+            TT_recipeAdder.addResearchableAssemblylineRecipe(
+                    CustomItemList.UncertaintyX_Hatch.get(1L),
+                    72_000_000,
+                    5_120,
+                    16_000_000,
+                    6,
+                    new Object[] { CustomItemList.eM_Computer_Bus.get(1),
+                            CustomItemList.hatch_CreativeMaintenance.get(1), ItemList.Field_Generator_UIV.get(1L),
+                            GregtechItemList.Laser_Lens_Special.get(4),
+                            new Object[] { OrePrefixes.circuit.get(Materials.Piko), 2 },
+                            CustomItemList.DATApipe.get(64), CustomItemList.DATApipe.get(64),
+                            ItemList.Cover_Screen.get(1) },
+                    new FluidStack[] { Materials.Iridium.getMolten(INGOTS * 100), new FluidStack(solderUEV, 2592),
+                            new FluidStack(ELEMENT.getInstance().NEPTUNIUM.getPlasma(), 20000),
+                            new FluidStack(ELEMENT.getInstance().FERMIUM.getPlasma(), 20000) },
+                    CustomItemList.hatch_CreativeUncertainty.get(1),
+                    200 * 20,
+                    (int) TierEU.RECIPE_UIV);
+        }
     }
 
     private void itemPartsUHVAsslineRecipes() {
@@ -2650,6 +2693,16 @@ public class ResearchStationAssemblyLine implements Runnable {
                     CustomItemList.TimeAccelerationFieldGeneratorTier7.get(1),
                     CustomItemList.TimeAccelerationFieldGeneratorTier8.get(1) };
 
+            // Spectral Components
+            // Cycling should fix issues with conflicting recipes for T1-T2, T4-T5 & T7-T8
+            final ItemStack[] spectralComponents = new ItemStack[] {
+                    // Red Spectral Component
+                    getModItem(SuperSolarPanels.ID, "redcomponent", 64),
+                    // Green Spectral Component
+                    getModItem(SuperSolarPanels.ID, "greencomponent", 64),
+                    // Blue Spectral Component
+                    getModItem(SuperSolarPanels.ID, "bluecomponent", 64) };
+
             for (int absoluteTier = 0; absoluteTier < 9; absoluteTier++) {
 
                 TT_recipeAdder.addResearchableAssemblylineRecipe(
@@ -2663,11 +2716,11 @@ public class ResearchStationAssemblyLine implements Runnable {
                                 getModItem(SuperSolarPanels.ID, "PhotonicSolarPanel", absoluteTier + 1, 0),
 
                                 // Red Spectral Component
-                                getModItem(SuperSolarPanels.ID, "redcomponent", 64),
+                                spectralComponents[absoluteTier % spectralComponents.length],
                                 // Green Spectral Component
-                                getModItem(SuperSolarPanels.ID, "greencomponent", 64),
+                                spectralComponents[(absoluteTier + 1) % spectralComponents.length],
                                 // Blue Spectral Component
-                                getModItem(SuperSolarPanels.ID, "bluecomponent", 64),
+                                spectralComponents[(absoluteTier + 2) % spectralComponents.length],
 
                                 plateList[absoluteTier],
                                 // Dyson Swarm Module Deployment Unit Base Casing
@@ -2856,6 +2909,34 @@ public class ResearchStationAssemblyLine implements Runnable {
                     10_000,
                     (int) TierEU.RECIPE_UMV);
         }
+
+        // Astral Array Fabricator
+        TT_recipeAdder.addResearchableAssemblylineRecipe(
+                CustomItemList.SpacetimeCompressionFieldGeneratorTier8.get(1),
+                480_000_000,
+                32_768,
+                (int) TierEU.RECIPE_MAX,
+                64,
+                new Object[] { GT_OreDictUnificator.get(OrePrefixes.frameGt, MaterialsUEVplus.WhiteDwarfMatter, 8),
+                        GT_OreDictUnificator.get(OrePrefixes.frameGt, MaterialsUEVplus.BlackDwarfMatter, 8),
+                        ItemList.EnergisedTesseract.get(32),
+                        GT_OreDictUnificator.get(OrePrefixes.nanite, MaterialsUEVplus.Eternity, 16),
+                        CustomItemList.SpacetimeCompressionFieldGeneratorTier8.get(64),
+                        CustomItemList.SpacetimeCompressionFieldGeneratorTier8.get(64),
+                        CustomItemList.SpacetimeCompressionFieldGeneratorTier8.get(10),
+                        CustomItemList.TimeAccelerationFieldGeneratorTier8.get(64),
+                        CustomItemList.TimeAccelerationFieldGeneratorTier8.get(64),
+                        CustomItemList.TimeAccelerationFieldGeneratorTier8.get(40),
+                        CustomItemList.StabilisationFieldGeneratorTier8.get(48),
+                        CustomItemList.EOH_Infinite_Energy_Casing.get(32),
+                        CustomItemList.EOH_Reinforced_Temporal_Casing.get(64),
+                        CustomItemList.EOH_Reinforced_Spatial_Casing.get(64), ItemList.Field_Generator_UMV.get(16) },
+                new FluidStack[] { MaterialsUEVplus.Space.getMolten(32_768L * 64),
+                        MaterialsUEVplus.Eternity.getMolten(16_384L * 64),
+                        MaterialsUEVplus.ExcitedDTSC.getFluid(8_192L * 64) },
+                CustomItemList.astralArrayFabricator.get(1),
+                300 * SECONDS,
+                (int) TierEU.RECIPE_UXV);
 
     }
 

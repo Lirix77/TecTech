@@ -1,6 +1,7 @@
 package com.github.technus.tectech.util;
 
 import java.lang.reflect.Field;
+import java.math.BigInteger;
 import java.util.Formatter;
 import java.util.HashMap;
 import java.util.Locale;
@@ -30,6 +31,40 @@ public final class TT_Utility {
 
     public static String formatNumberExp(double value) {
         return getFormatter().format("%+.5E", value).toString();
+    }
+
+    // Formats to standard form.
+    public static String toStandardForm(long number) {
+        if (number == 0) {
+            return "0";
+        }
+
+        int exponent = (int) Math.floor(Math.log10(Math.abs(number)));
+        double mantissa = number / Math.pow(10, exponent);
+
+        // Round the mantissa to two decimal places
+        mantissa = Math.round(mantissa * 100.0) / 100.0;
+
+        return mantissa + "*10^" + exponent;
+    }
+
+    public static String toStandardForm(BigInteger number) {
+        BigInteger abs = number.abs();
+        if (abs.compareTo(BigInteger.valueOf(Long.MAX_VALUE)) < 0) {
+            return toStandardForm(number.longValue());
+        }
+        String strNum = abs.toString();
+        int exponent = strNum.length() - 1;
+        return (number.signum() == -1 ? "-" : "") + strNum.charAt(0) + "." + strNum.substring(1, 3) + "*10^" + exponent;
+
+    }
+
+    public static String toExponentForm(BigInteger number) {
+        BigInteger abs = number.abs();
+        String strNum = abs.toString();
+        int exponent = strNum.length() - 1;
+        return (number.signum() == -1 ? "-" : "") + strNum.charAt(0) + "." + strNum.substring(1, 3) + "e" + exponent;
+
     }
 
     public static int bitStringToInt(String bits) {
@@ -153,12 +188,4 @@ public final class TT_Utility {
         }
         return previousValue;
     }
-
-    public static String doubleToString(double value) {
-        if (value == (long) value) {
-            return Long.toString((long) value);
-        }
-        return Double.toString(value);
-    }
-
 }

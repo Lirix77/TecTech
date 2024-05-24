@@ -1,6 +1,7 @@
 package com.github.technus.tectech.thing.cover;
 
 import static com.github.technus.tectech.mechanics.tesla.ITeslaConnectable.TeslaUtil.teslaSimpleNodeSetAdd;
+import static com.github.technus.tectech.mechanics.tesla.ITeslaConnectable.TeslaUtil.teslaSimpleNodeSetRemove;
 import static ic2.api.info.Info.DMG_ELECTRIC;
 
 import net.minecraft.entity.player.EntityPlayer;
@@ -31,6 +32,16 @@ public class GT_Cover_TM_TeslaCoil extends GT_CoverBehavior {
     }
 
     @Override
+    public boolean onCoverRemoval(ForgeDirection side, int aCoverID, int aCoverVariable, ICoverable aTileEntity,
+            boolean aForced) {
+        teslaSimpleNodeSetRemove(
+                new TeslaCoverConnection(
+                        aTileEntity.getIGregTechTileEntityOffset(0, 0, 0),
+                        getTeslaReceptionCapability()));
+        return super.onCoverRemoval(side, aCoverID, aCoverVariable, aTileEntity, aForced);
+    }
+
+    @Override
     public String getDescription(ForgeDirection side, int aCoverID, int aCoverVariable, ICoverable aTileEntity) {
         return "Do not attempt to use screwdriver!"; // TODO Translation support
     }
@@ -52,8 +63,8 @@ public class GT_Cover_TM_TeslaCoil extends GT_CoverBehavior {
 
     @Override
     public int getTickRate(ForgeDirection side, int aCoverID, int aCoverVariable, ICoverable aTileEntity) {
-        // It updates once every 200 ticks, so once every 10 seconds
-        return 200;
+        // It updates once every 10 ticks, so once every 0.5 second
+        return 10;
     }
 
     public byte getTeslaReceptionCapability() {
