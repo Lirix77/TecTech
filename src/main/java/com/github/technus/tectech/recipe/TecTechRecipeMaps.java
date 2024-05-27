@@ -27,9 +27,9 @@ public class TecTechRecipeMaps {
                     EyeOfHarmonyFrontend.maxFluidOutputs)
             .minInputs(1, 0).progressBar(GT_UITextures.PROGRESSBAR_HAMMER, ProgressBar.Direction.DOWN)
             .progressBarPos(78, 24 + 2).logoPos(10, 10)
-            .neiHandlerInfo(
-                    builder -> builder.setDisplayStack(CustomItemList.Machine_Multi_EyeOfHarmony.get(1))
-                            .setMaxRecipesPerPage(1))
+            //.neiHandlerInfo(
+            //        builder -> builder.setDisplayStack(CustomItemList.Machine_Multi_EyeOfHarmony.get(1))
+            //                .setMaxRecipesPerPage(1))
             .frontend(EyeOfHarmonyFrontend::new).build();
     public static final RecipeMap<RecipeMapBackend> researchStationFakeRecipes = RecipeMapBuilder
             .of("gt.recipe.researchStation").maxIO(1, 1, 0, 0).useSpecialSlot()
@@ -45,7 +45,8 @@ public class TecTechRecipeMaps {
             .addSpecialTexture(41, 22, 40, 40, TecTechUITextures.PICTURE_RACK_LARGE)
             .logo(TecTechUITextures.PICTURE_TECTECH_LOGO).logoSize(18, 18).logoPos(151, 63)
             .neiTransferRect(81, 33, 25, 18).neiTransferRect(124, 33, 18, 29).frontend(ResearchStationFrontend::new)
-            .neiHandlerInfo(builder -> builder.setDisplayStack(CustomItemList.Machine_Multi_Research.get(1))).build();
+            //.neiHandlerInfo(builder -> builder.setDisplayStack(CustomItemList.Machine_Multi_Research.get(1)))
+            .build();
 
     public static final RecipeMap<RecipeMapBackend> godforgePlasmaRecipes = RecipeMapBuilder.of("gt.recipe.fog_plasma")
             .maxIO(1, 1, 1, 1).progressBar(TecTechUITextures.PROGRESSBAR_GODFORGE_PLASMA, ProgressBar.Direction.RIGHT)
