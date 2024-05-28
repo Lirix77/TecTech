@@ -419,8 +419,9 @@ catch (Exception ignored) {
     identifiedVersion = versionOverride
 }
 version = ""
+identifiedVersion = "5.3.13"
 ext {
-    modVersion = identifiedVersion
+    modVersion = "5.3.13"
 }
 
 if (identifiedVersion == versionOverride) {
@@ -437,7 +438,6 @@ if (project.hasProperty("customArchiveBaseName") && customArchiveBaseName) {
         archivesName = modId
     }
 }
-
 
 minecraft {
     if (replaceGradleTokenInFile) {
@@ -566,7 +566,7 @@ configurations {
     create("compile") {
         description = "Deprecated: use api or implementation instead, gets put in api"
         canBeConsumed = false
-        canBeResolved = false
+        canBeResolved = true
         visible = false
     }
     create("testCompile") {

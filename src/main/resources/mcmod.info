@@ -3,7 +3,7 @@
   "modid": "${modId}",
   "name": "${modName}",
   "description": "TecTech - Tec Technology Interdimensional! Replace UUMatter with something overly complicated and annoying! (GT5u Addon)",
-  "version": "${modVersion}",
+  "version": "5.3.13",
   "mcversion": "${minecraftVersion}",
   "url": "",
   "updateUrl": "",
