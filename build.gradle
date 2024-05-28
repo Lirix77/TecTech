@@ -418,7 +418,7 @@ catch (Exception ignored) {
     versionOverride = 'NO-GIT-TAG-SET'
     identifiedVersion = versionOverride
 }
-version = ""
+version = "client"
 identifiedVersion = "5.3.13"
 ext {
     modVersion = "5.3.13"
